@@ -92,8 +92,7 @@ HTML {
 
 
 #welcome_container {
-	width: 800px;
-}
+}	
 
 #welcome_container span:nth-child(1) {
     font-size: 80px;
@@ -195,7 +194,7 @@ p {
 }
 
 #news_container {
-	width: 800px;
+	
 }
 
 #news_container span:nth-child(1) {
