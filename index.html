@@ -8,6 +8,9 @@
   <style>
     #more {display: none;}
   </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/web_icon.jpeg">
 <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -20,76 +23,121 @@ function LoadMore() {
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("myBtn");
 
+  if (!dots || !moreText || !btnText) {
+    return;
+  }
+
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "SHOW MORE..."; 
+    btnText.innerHTML = "SHOW MORE...";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "HIDE..."; 
+    btnText.innerHTML = "HIDE";
     moreText.style.display = "inline";
   }
 }
 </script>
 
+<script>
+function updateCommandClock() {
+  var clockEl = document.getElementById("command-clock");
+  if (!clockEl) {
+    return;
+  }
+  clockEl.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+}
+
+function activatePageMotion() {
+  var animatedItems = document.querySelectorAll(".hero-section, table tr");
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("in-view");
+      }
+    });
+  }, { threshold: 0.08 });
+
+  animatedItems.forEach(function (item) {
+    item.classList.add("fade-reveal");
+    observer.observe(item);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  activatePageMotion();
+  updateCommandClock();
+  setInterval(updateCommandClock, 1000);
+});
+</script>
+
 
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <div class="tech-grid-overlay"></div>
+  <table style="width:100%;max-width:1080px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Xi Shen</name> 
-              </p>
+        <section class="command-bar">
+          <div class="command-left">
+            <span class="system-pill"><span class="system-dot"></span>System Online</span>
+            <span class="chip">Real-time Vision</span>
+            <span class="chip">Edge Vision</span>
+            <span class="chip">Safety AI</span>
+          </div>
+          <div class="command-right">
+            <span class="label">Lab clock</span>
+            <span id="command-clock">--:--:--</span>
+          </div>
+        </section>
 
-              <p style="text-align:center">
-                Email: <i><u>shenxiluc at gmail dot com</u></i> 
-              </p>
-              
-              <p>
-              <b>Bio:</b>
-              I am the Co-founder and Chief Scientist at <a href="https://www.intellindust.com/">Intellindust</a>, where our team (<a href="https://intellindust-ai-lab.github.io/">Intellindust AI Lab</a>) develops reliable and efficient computer vision algorithms for real-time applications on edge devices with limited NPU computation.
-            </p>
-
+        <section class="hero-section">
+          <div class="hero-text">
+            <p class="hero-kicker">Reliable Vision AI for the Real World</p>
+            <h1><name>Xi Shen</name></h1>
+            <p class="hero-contact">Email: <i><u>shenxiluc at gmail dot com</u></i></p>
             <p>
-              I completed my Ph.D. in the <a href="http://imagine.enpc.fr/">IMAGINE team</a> at <a href="http://www.enpc.fr/">École des Ponts ParisTech</a>. Before that, I was a Senior Researcher at Tencent AI Lab in Shenzhen, China.
+              I am the Co-founder and Chief Scientist at <a href="https://www.intellindust.com/">Intellindust</a> (Shenzhen, China), where our team
+              (<a href="https://intellindust-ai-lab.github.io/">Intellindust AI Lab</a>) builds reliable and efficient computer vision
+              systems for real-time applications on edge devices with limited NPU compute.
             </p>
-
             <p>
-              If you’re interested in an internship focusing on safety AI or efficient training for real-time vision applications, feel free to reach out by email. 
-
+              I completed my Ph.D. in the <a href="http://imagine.enpc.fr/">IMAGINE team</a> at
+              <a href="http://www.enpc.fr/">Ecole des Ponts ParisTech</a>. Previously, I worked as a Senior Researcher at Tencent AI Lab.
             </p>
-
             <p>
-              (Last update 09/11/2025)
+              If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.
             </p>
-
-
-              <p style="text-align:center">
-              <div id="circles_container">
-                  <a href='http://github.com/XiSHEN0220'><img class="iconImg" src="images/github.png" alt="Github">GitHub</a>
-                  <a href='Xi_Shen_CV.pdf'><img class="iconImg" src="images/cv.png" alt="CV">CV</a>
-                  <a href='https://scholar.google.com/citations?user=nKSXus4AAAAJ&hl=en'><img class="iconImg" src="images/googleScholar.png" alt="Google Scholar">Google Scholar</a>
-                  
-                </div>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/xishen.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/xishen.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-
+            <p class="last-update">(Last update: 2025-11-09)</p>
+            <div class="now-building">
+              <p class="now-title">Now Building</p>
+              <p class="now-body">Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.</p>
+            </div>
+            <div id="circles_container">
+              <a href='http://github.com/XiSHEN0220'><img class="iconImg" src="images/github.png" alt="Github">GitHub</a>
+              <a href='Xi_Shen_CV.pdf'><img class="iconImg" src="images/cv.png" alt="CV">CV</a>
+              <a href='https://scholar.google.com/citations?user=nKSXus4AAAAJ&hl=en'><img class="iconImg" src="images/googleScholar.png" alt="Google Scholar">Google Scholar</a>
+              <a href='https://intellindust-ai-lab.github.io/'><img class="iconImg" src="images/ai_lab_logo.png" alt="Intellindust AI Lab">Intellindust AI Lab</a>
+            </div>
+          </div>
+          <div class="hero-photo-wrap">
+            <a href="images/xishen_ai_sr.png">
+              <img alt="profile photo" src="images/xishen_ai_sr.png" class="hoverZoomLink hero-photo">
+            </a>
+          </div>
+        </section>
 
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr><td style="padding:20px;width:100%;vertical-align:middle">
               <heading>📰 News</heading>
   <hr/>
     
-        <ul style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
+        <ul class="news-list" style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
+        <li class="hot-news">
+          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">07 / 03 / 2026</b>&emsp;
+           Two papers (HED and MoVie) are accepted by CVPR 2026, <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">SURE+</a> now available on arXiv.
+        </li>
+
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">04 / 02 / 2026</b>&emsp;
            <a href="https://intellindust-ai-lab.github.io/projects/FSOD-VFM/">FSOD-VFM</a> is accepted by ICLR 2026.
@@ -125,12 +173,12 @@ function LoadMore() {
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">27 / 02 / 2025</b>&emsp;
            <a href="https://www.shihuahuang.cn/DEIM/">"DEIM: DETR with Improved Matching for Fast Convergence"</a> is accepted by CVPR 2025.
         </li>
-        
+        <span id="dots"> </span>
+        <span id="more">
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">03 / 10 / 2024</b>&emsp;
            <a href="https://www.nature.com/articles/s41565-024-01753-8">"Designing nanotheranostics with machine learning"</a> is accepted by Nature Nanotechnology 2024.
         </li>
-          
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 10 / 2024</b>&emsp;
            Building on our CVPR work <a href="https://yutingli0606.github.io/SURE/">SURE</a>, we won 1st place in the Open-set Recognition challenge at the <a href="https://www.ood-cv.org/challenge.html">Out Of Distribution Generalization in Computer Vision Workshop, ECCV 2024</a>.
@@ -139,118 +187,38 @@ function LoadMore() {
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 09 / 2024</b>&emsp;
           We release <a href="https://arxiv.org/abs/2409.07907">COCO-FP</a>, a dataset designed to evaluate false positive detections for COCO object detectors.
         </li>
-        
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 09 / 2024</b>&emsp;
-          <a href="https://yutingli0606.github.io/HTR-VT/">"HTR-VT"</a> is accepted by Pattern Recognition 2024. 
-        </li>
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 06 / 2024</b>&emsp;
            We achieved 1st place in Low-light Object Detection and 3rd place in Instance Segmentation at <a href="https://pbdl-ws.github.io/pbdl2024/">the 4th Physics-Based Vision meets Deep Learning Workshop, CVPR 2024</a>.
         </li>
-          
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">27 / 02 / 2024</b>&emsp;
            2/2 papers are accepted by CVPR 2024, thanks to all my co-authors!
         </li>
-        <span id="dots"> </span>
-        <span id="more">
-        
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 08 / 2023</b>&emsp;
            <a href="https://www.m-psi.fr/Papers/TokenCut2022/">"TokenCut"</a> is accepted by TPAMI.
         </li>
         <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 07 / 2023</b>&emsp;
-           <a href="https://arxiv.org/abs/2309.09294">"LivelySpeaker"</a> is accepted by ICCV 2023.
-        </li>
-        <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 03 / 2023</b>&emsp;
            3/3 papers are accepted by CVPR 2023, thanks to all my co-authors!
-        </li>  
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">15 / 01 / 2023</b>&emsp;
-           Our paper <a href="https://mael-zys.github.io/T2M-GPT/">T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations</a> is available on arXiv.
         </li>
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">22 / 11 / 2022</b>&emsp;
            Our paper <a href="https://sadtalker.github.io/">SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</a> is available on arXiv.
         </li>
-        
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">30 / 08 / 2022</b>&emsp;
-           Our paper <a href="https://arxiv.org/abs/2207.01567">Back to MLP: A Simple Baseline for Human Motion Prediction (siMLPe)</a> is accepted to WACV 2023.
-        </li>
-
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">14 / 07 / 2022</b>&emsp;
-           I am honoured to be acknowledged as Outstanding Reviewer for ICML 2022.
-        </li>
-        
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">27 / 06 / 2022</b>&emsp;
-           Our paper <a href="https://yingyichen-cyy.github.io/CompressFeatNoisyLabels/">Compressing Features for Learning with Noisy Labels</a> is accepted to TNNLS 2022.
-        </li>
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">19 / 06 / 2022</b>&emsp;
-           CVPR 2022 workshop presentations: <a href="https://www.m-psi.fr/Papers/TokenCut2022/">"TokenCut"</a> in <a href="https://sites.google.com/view/l3d-ivu/">"L3D"</a>;  <a href="http://imagine.enpc.fr/~shenx/SegSwap/">"SegSwap"</a> in <a href="https://image-matching-workshop.github.io/">"Image Matching"</a> and <a href="https://sites.google.com/view/t4v-cvpr22">"Transformer"</a>.
-        </li>  
-          
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">02 / 03 / 2022</b>&emsp;
-           <a href="https://www.m-psi.fr/Papers/TokenCut2022/">"TokenCut"</a> is accepted to CVPR 2022. Check <a href="https://huggingface.co/spaces/akhaliq/TokenCut">Gradio Demo</a> here. 
-        </li>  
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">25 / 02 / 2022</b>&emsp;
-          Our paper <a href="https://www.m-psi.fr/Papers/TokenCut2022/">"Self-Supervised Transformers for Unsupervised Object Discovery using Normalized Cut"</a> (TokenCut) is published on arXiv.
+           <a href="https://www.m-psi.fr/Papers/TokenCut2022/">"TokenCut"</a> is accepted to CVPR 2022. Check <a href="https://huggingface.co/spaces/akhaliq/TokenCut">Gradio Demo</a> here.
         </li>
         <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">13 / 01 / 2022</b>&emsp;
-          Our paper <a href="http://imagine.enpc.fr/~shenx/HisImgAnalysis/">"Spatially-consistent Feature Matching and Learning for Heritage Image Analysis"</a> is accepted to <a href="https://nips.cc/">IJCV</a>.
-        </li>
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">28 / 12 / 2021</b>&emsp;
-          I join <a href="https://ai.tencent.com">Tencent AI Lab</a> as a Senior Researcher, I will work with <a href="https://juew.org/">Dr. Jue Wang</a> on Computer Vision.
-        </li>
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">03 / 12 / 2021</b>&emsp;
-          I am defending my Ph.D. today! <a href="Xi_Shen_defense_slides.pdf">[Slides]</a> <a href="Xi_Shen_thesis.pdf">[Thesis]</a>
-        </li>
-        <li>
-          <b style="background-color:#ddd;">29 / 10 / 2021</b>&emsp;
-          Our paper <a href="http://imagine.enpc.fr/~shenx/SegSwap/">"Learning Co-segmentation by Segment Swapping for Retrieval and Discovery"</a> is published on arXiv.
-        </li> 
-        <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">29 / 09 / 2021</b>&emsp;
-          Our paper <a href="http://imagine.enpc.fr/~shenx/SSR/">"Re-ranking for image retrieval and transductive few-shot classification"</a> is accepted to <a href="https://nips.cc/">Neurips 2021</a>.
-        </li>
-        
-          <li>
-          <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">18 / 04 / 2021</b>&emsp;
-          Our paper "<a href="https://imagine.enpc.fr/~shenx/ImageCollation/"> Image Collation: Matching illustrations in manuscripts</a>" is accepted to <a href="https://icdar2021.org/">ICDAR 2021</a>.
-        </li>
-          
-          <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">15 / 07 / 2020</b>&emsp;
-          Our paper "<a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/"> RANSAC-Flow: generic two-stage image alignment</a>" is accepted to <a href="https://eccv2020.eu/">ECCV 2020</a>. Watch the <a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/img/demo_ransac_flow.mp4"> demo</a>.
+          Our paper "<a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/"> RANSAC-Flow: generic two-stage image alignment</a>" is accepted to <a href="https://eccv2020.eu/">ECCV 2020</a>.
         </li>
-        <li>
-          <b style="background-color:#ddd;">07 / 03 / 2020</b>&emsp;
-          The web application of historical watermark recognition is online!! Check the <a href="https://hal.inria.fr/hal-02513038/document"> paper </a> and the  <a href="https://filigranes.inria.fr/#/filigrane-search"> web application </a>.
-        </li> 
-        <li>
-          <b style="background-color:#ddd;">12 / 12 / 2019</b>&emsp;
-          Our paper "<a href="https://openreview.net/forum?id=Hkg-xgrYvH"> Empirical Bayes Transductive Meta-Learning with Synthetic Gradients</a>" accepted to <a href="https://iclr.cc/Conferences/2020">ICLR 2020</a>.
-        </li> 
-        <li>
-          <b style="background-color:#ddd;">06 / 08 / 2019</b>&emsp;
-          Our paper "<a href="http://imagine.enpc.fr/~shenx/Watermark"> Large-Scale Historical Watermark Recognition: dataset and a new consistency-based approach</a>" is published on arXiv.
-        </li> 
-        
         </span>
         <div style="text-align:center">
-        <button class="button-2" role="button" onclick="LoadMore()" id="myBtn" >SHOW MORE...</button>
-      </div>
+          <button class="button-2" role="button" onclick="LoadMore()" id="myBtn">SHOW MORE...</button>
+        </div>
         </ul>
   </tbody></table>
 
@@ -307,7 +275,7 @@ function LoadMore() {
   </tbody>
 </table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="research-section" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>💡 Research</heading>
@@ -325,11 +293,90 @@ function LoadMore() {
         </tbody></table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr bgcolor="#ffffd0">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div style="display: flex; justify-content: center;">
+                <img src='images/sureplus.png' width="220" >
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">
+                <papertitle>[SURE+] From Misclassifications to Outliers: Joint Reliability Assessment for Classification</papertitle>
+              </a>
+              </br>
+
+              Yang Li,
+              Youyang Sha,
+              Yinzhi Wang,
+              Timothy Hospedales,
+              <strong>Xi Shen</strong>,
+              <a href="http://hushell.github.io">Shell Xu Hu<sup>+</sup></a>,
+              <a href="https://xuanlong-yu.github.io/">Xuanlong Yu<sup>+</sup></a>
+              </br>
+              <em>arXiv</em>, 2026
+              </br>
+              <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">[Project page]</a> &nbsp;
+              <a href="https://arxiv.org/abs/2603.03903">[PDF]</a> &nbsp;
+              <a href="https://github.com/Intellindust-AI-Lab/SUREPlus">[Code (GitHub)]</a> &nbsp;
+              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/SUREPlus" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div style="display: flex; justify-content: center;">
+                <img src='images/hed.png' width="220" >
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>A Closer Look at Cross-Domain Few-Shot Object Detection: Fine-Tuning Matters and Parallel Decoder Helps</papertitle>
+              </br>
+
+              <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
+              Youyang Sha,
+              <a href="https://capsule2077.github.io/">Longfei Liu</a>,
+              <strong>Xi Shen<sup>+</sup></strong>,
+              Di Yang<sup>+</sup>
+              </br>
+              <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2026
+              </br>
+              [Project page (WIP)] &nbsp;
+              [PDF / arXiv (WIP)] &nbsp;
+              [Code (WIP)]
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div style="display: flex; justify-content: center;">
+                <img src='images/movie.png' width="220" >
+              </div>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <papertitle>MoVie: Broaden Your Views with Human Motion for Action Detection</papertitle>
+              </br>
+
+              Di Yang,
+              Mahmoud Ali,
+              <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
+              <strong>Xi Shen</strong>,
+              Quan Kong,
+              Gianpiero Francesca,
+              Francois Bremond<sup>+</sup>
+              </br>
+              <em>The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em>, 2026
+              </br>
+              [Project page (WIP)] &nbsp;
+              [PDF / arXiv (WIP)] &nbsp;
+              [Code (WIP)]
+            </td>
+            </tr>
             
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/fsod_vfm.png' width="160" >
+                <img src='images/fsod_vfm.png' width="220" >
               </div>
               
             </td>
@@ -360,7 +407,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/skel_cf.gif' width="160" >
+                <img src='images/skel_cf.gif' width="220" >
               </div>
               
             </td>
@@ -393,7 +440,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/simrod.png' width="160" >
+                <img src='images/simrod.png' width="220" >
               </div>
               
             </td>
@@ -415,8 +462,8 @@ function LoadMore() {
               </br>
               <a href="https://ocean146.github.io/SimROD2025/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2503.07101">[PDF]</a> &nbsp;
-              <a href="https://github.com/ocean146/SimROD/tree/main">[Code (GitHub)]</a>
-              <a class="github-button" href="https://github.com/ocean146/SimROD/tree/main" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a href="https://github.com/ocean146/SimROD">[Code (GitHub)]</a>
+              <a class="github-button" href="https://github.com/ocean146/SimROD" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
 
             </td>
@@ -425,7 +472,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/evp2.png' width="160" >
+                <img src='images/evp2.png' width="220" >
               </div>
               
             </td>
@@ -455,7 +502,7 @@ function LoadMore() {
             <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/deimv2.png' width="160" >
+                <img src='images/deimv2.png' width="220" >
               </div>
 
             </td>
@@ -484,7 +531,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/deim.png' width="160" >
+                <img src='images/deim.png' width="220" >
               </div>
 
             </td>
@@ -515,7 +562,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/ml_nano.png' width="160" >
+                <img src='images/ml_nano.png' width="220" >
               </div>
 
             </td>
@@ -543,7 +590,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/htr_vt.jpeg' width="160" >
+                <img src='images/htr_vt.jpeg' width="220" >
               </div>
 
             </td>
@@ -571,7 +618,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/dattt_teaser.png' width="160" >
+                <img src='images/dattt_teaser.png' width="220" >
               </div>
               
             </td>
@@ -602,7 +649,7 @@ function LoadMore() {
             <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sure.jpeg' width="160" >
+                <img src='images/sure.jpeg' width="220" >
               </div>
               
             </td>
@@ -642,7 +689,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/2022_tokencut_video.gif' width="160" >
+                <img src='images/2022_tokencut_video.gif' width="220" >
               </div>
               
             </td>
@@ -674,7 +721,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/livelyspeaker.gif' width="160" >
+                <img src='images/livelyspeaker.gif' width="220" >
               </div>
               
             </td>
@@ -705,7 +752,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/vpt.png' width="160" >
+                <img src='images/vpt.png' width="220" >
               </div>
               
             </td>
@@ -734,7 +781,7 @@ function LoadMore() {
             <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/t2m.gif' width="160" >
+                <img src='images/t2m.gif' width="220" >
               </div>
               
             </td>
@@ -769,7 +816,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sadtalker.gif' width="160" >
+                <img src='images/sadtalker.gif' width="220" >
               </div>
               
             </td>
@@ -807,7 +854,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/simple.png' width="160" >
+                <img src='images/simple.png' width="220" >
               </div>
               
             </td>
@@ -840,7 +887,7 @@ function LoadMore() {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sortout.jpeg' width="160" >
+                <img src='images/sortout.jpeg' width="220" >
               </div>
               
             </td>
@@ -871,7 +918,7 @@ function LoadMore() {
             <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/tokencut.gif' width="160" >
+                <img src='images/tokencut.gif' width="220" >
               </div>
               
             </td>
@@ -905,7 +952,7 @@ function LoadMore() {
           <tr>
             <td style="padding:20px;width:25%;vertical-align:center">
               <div style="display: flex; justify-content: center;">
-                <img src='images/ijcv2022.jpg' width="160">
+                <img src='images/ijcv2022.jpg' width="220">
               </div>
               
             </td>
@@ -949,7 +996,7 @@ function LoadMore() {
         <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/teaser_SegSwap.jpeg' width="160" >
+                <img src='images/teaser_SegSwap.jpeg' width="220" >
               </div>
               
             </td>
@@ -987,7 +1034,7 @@ function LoadMore() {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/teaser_SSR.jpg' width="160" >
+                <img src='images/teaser_SSR.jpg' width="220" >
               </div>
               
             </td>
@@ -1016,7 +1063,7 @@ function LoadMore() {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/collation.jpeg' width="160" >
+                <img src='images/collation.jpeg' width="220" >
               </div>
               
             </td>
@@ -1082,7 +1129,7 @@ function LoadMore() {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sib.jpeg' width="160" >
+                <img src='images/sib.jpeg' width="220" >
                 
               </div>
               
@@ -1113,7 +1160,7 @@ function LoadMore() {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/watermark.png' width="160" > 
+                <img src='images/watermark.png' width="220" > 
                 
               </div>
               
@@ -1152,7 +1199,7 @@ function LoadMore() {
         <tr bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/artminer.jpeg' width="160" >
+                <img src='images/artminer.jpeg' width="220" >
                 
               </div>
               
@@ -1190,7 +1237,7 @@ function LoadMore() {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/maan.png' width="160" >
+                <img src='images/maan.png' width="220" >
                 
               </div>
               
@@ -1231,87 +1278,8 @@ function LoadMore() {
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <h3> Academic Services </h3>
           <p>&nbsp; &nbsp; &nbsp; &nbsp; Reviewer for ICML, CVPR, ECCV, NeurIPS, ICLR, BMVC, WACV, TPAMI, PR, IJCV, ICCV. </p>
-          <h3> Teacher Assistant </h3>
-          <ul>
-          <li> 
-            <b style="background-color:#ddd;">03 / 2021 - 04 / 2021 &emsp; <a href="https://psl.eu/en"> Université PSL</a> (Paris Sciences & Lettres)</b>&emsp;
-            <a href="https://data-psl.github.io/intensive-week-dhai-2022/">Digital Humanities Meet Artificial Intelligence</a> (M1).
-          </li>
-          <li> 
-            <b style="background-color:#ddd;">02 / 2021 - 06 / 2021 &emsp; <a href="https://www.ecoledesponts.fr">Ecole des Ponts ParisTech</a>  </b>&emsp;
-            Computer Vision for Mechanics of materials (L3).
-          </li>
-          <li> <b style="background-color:#ddd;">02 / 2019 - 06 / 2019 &emsp; <a href="https://www.ecoledesponts.fr">Ecole des Ponts ParisTech</a>  </b>&emsp; Traitement de l'information et vision artificielle (M1).
-          </li>
-          
-          </ul>
-
           <h3> Sports</h3>
           <p>&nbsp; &nbsp; &nbsp; &nbsp; I’m an amateur football player with a personal best of 11.30 seconds in the 100 meters. I also enjoy jogging, hiking, camping, and skiing. </p>
-
-          <h3> Coding</h3>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; All of my released code is maintained on my <a href="https://github.com/XiSHEN0220">GitHub account </a>.  </p>
-          <table><tbody>
-              
-              
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/RANSAC-Flow" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/RANSAC-Flow/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">RANSAC-Flow</td>
-             
-
-             
-             <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/ArtMiner" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/ArtMiner/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">ArtMiner</td>
-             
-        </tbody></table>
-        <table><tbody>
-             <td width="10%"><p> <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">TokenCut</td>
-
-
-             
-
-              <td width="10%"><p> <a class="github-button" href="https://github.com/hushell/sib_meta_learn" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/hushell/sib_meta_learn/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">SIB</td>
-        </tbody></table>
-        <table><tbody>
-             <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/SegSwap" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/SegSwap/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">SegSwap</td>
-
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/SSR" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/SSR/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">SSR</td>
-        </tbody></table>
-
-        <table><tbody>
-             <td width="10%"><p> <a class="github-button" href="https://github.com/yingyichen-cyy/Nested-Co-teaching" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/yingyichen-cyy/Nested-Co-teaching/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">NCT</td>
-
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/WatermarkReco" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/XiSHEN0220/WatermarkReco/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">WatermarkReco</td>
-
-              
-        </tbody></table>
-
-        <table><tbody>
-             <td width="10%"><p> <a class="github-button" href="https://github.com/dulucas/siMLPe" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/dulucas/siMLPe/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">siMLPe</td>
-
-              <td width="10%"><p> <a class="github-button" href="https://github.com/Mael-zys/T2M-GPT" data-icon="octicon-star" data-size="large" data-show-count="true">Star</a></p></td>
-              <td width="10%"><p> <a class="github-button" href="https://github.com/Mael-zys/T2M-GPT/fork" data-icon="octicon-repo-forked" data-size="large" data-show-count="true">Fork</a></p></td>
-              <td width="20%">T2M-GPT</td>
-              
-
-
-              
-        </tbody></table>
         
 
         </br>
