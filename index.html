@@ -11,9 +11,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260307b">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260307c">
   <link rel="icon" type="image/png" href="images/web_icon.jpeg">
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
@@ -22,6 +21,7 @@ function LoadMore() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
   var btnText = document.getElementById("myBtn");
+  var t = (window.__i18n && window.__i18n[window.__lang]) ? window.__i18n[window.__lang] : null;
 
   if (!dots || !moreText || !btnText) {
     return;
@@ -29,23 +29,261 @@ function LoadMore() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "SHOW MORE...";
+    btnText.innerHTML = t ? t.show_more : "Show more";
     moreText.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "HIDE";
+    btnText.innerHTML = t ? t.hide : "Hide";
     moreText.style.display = "inline";
   }
 }
 </script>
 
 <script>
+window.__i18n = {
+  en: {
+    system_online: "System online",
+    real_time_vision: "Real-time Vision",
+    edge_vision: "Edge Vision",
+    safety_ai: "Safety AI",
+    lab_clock: "Lab clock",
+    hero_kicker: "Reliable Vision AI for the Real World",
+    email_label: "Email:",
+    bio_1: "I am the Co-founder and Chief Scientist at <a href=\"https://www.intellindust.com/\">Intellindust</a> (Shenzhen, China). Our team (<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>) builds reliable and efficient computer vision systems for real-time applications on edge devices with limited NPU compute.",
+    bio_2: "I completed my Ph.D. in the <a href=\"http://imagine.enpc.fr/\">IMAGINE team</a> at <a href=\"http://www.enpc.fr/\">Ecole des Ponts ParisTech</a>, and I lived in lovely Paris, France for 10 years. Previously, I worked as a Senior Researcher at Tencent AI Lab.",
+    bio_3: "If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.",
+    last_update: "(Last update: 2025-11-09)",
+    now_title: "Now Building",
+    now_body: "Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.",
+    heading_news: "📰 News",
+    heading_awards: "🏆 Awards & Honors",
+    heading_research: "💡 Research",
+    heading_misc: "🎯 Misc.",
+    show_more: "Show more",
+    hide: "Hide"
+  },
+  zh: {
+    system_online: "系统在线",
+    real_time_vision: "实时视觉",
+    edge_vision: "边缘视觉",
+    safety_ai: "安全人工智能",
+    lab_clock: "实验室时钟",
+    hero_kicker: "面向真实世界的可靠视觉人工智能",
+    email_label: "邮箱：",
+    bio_1: "我是 <a href=\"https://www.intellindust.com/\">Intellindust</a>（中国深圳）的联合创始人兼首席科学家。我们的团队（<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>）专注于在有限 NPU 算力的边缘设备上构建可靠、高效的实时计算机视觉系统。",
+    bio_2: "我在 <a href=\"http://www.enpc.fr/\">巴黎高科国立桥路学院</a> 的 <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> 团队完成博士学位，并在法国美丽的巴黎生活了 10 年。此前我曾在腾讯 AI Lab 担任高级研究员。",
+    bio_3: "如果你对安全人工智能或实时视觉高效训练相关实习感兴趣，欢迎邮件联系我。",
+    last_update: "（最后更新：2025-11-09）",
+    now_title: "当前在做",
+    now_body: "面向实时边缘部署的鲁棒高效开放世界视觉模型，当前重点是新一代边缘视觉模型。",
+    heading_news: "📰 动态",
+    heading_awards: "🏆 奖项与荣誉",
+    heading_research: "💡 研究",
+    heading_misc: "🎯 其他",
+    show_more: "显示更多",
+    hide: "收起"
+  },
+  fr: {
+    system_online: "Système en ligne",
+    real_time_vision: "Vision en temps réel",
+    edge_vision: "Vision embarquée",
+    safety_ai: "IA de sûreté",
+    lab_clock: "Horloge du labo",
+    hero_kicker: "IA visuelle fiable pour le monde réel",
+    email_label: "E-mail :",
+    bio_1: "Je suis cofondateur et directeur scientifique de <a href=\"https://www.intellindust.com/\">Intellindust</a> (Shenzhen, Chine). Notre équipe (<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>) développe des systèmes de vision par ordinateur fiables et efficaces pour des applications temps réel sur des dispositifs edge à budget NPU limité.",
+    bio_2: "J'ai effectué mon doctorat dans l'équipe <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> à <a href=\"http://www.enpc.fr/\">l'Ecole des Ponts ParisTech</a>, et j'ai vécu 10 ans dans la belle ville de Paris, en France. Auparavant, j'étais Senior Researcher chez Tencent AI Lab.",
+    bio_3: "Si vous êtes intéressé par un stage en IA de sûreté ou en entraînement efficace pour la vision temps réel, contactez-moi par e-mail.",
+    last_update: "(Dernière mise à jour : 2025-11-09)",
+    now_title: "En ce moment",
+    now_body: "Des modèles de vision open-world robustes et efficaces pour le déploiement edge en temps réel, avec un focus actuel sur les modèles edge vision de nouvelle génération.",
+    heading_news: "📰 Actualités",
+    heading_awards: "🏆 Prix et distinctions",
+    heading_research: "💡 Recherche",
+    heading_misc: "🎯 Divers",
+    show_more: "Afficher plus",
+    hide: "Masquer"
+  }
+};
+window.__lang = "en";
+
+function applyLanguage(lang) {
+  var t = window.__i18n[lang] || window.__i18n.en;
+  window.__lang = lang;
+  document.documentElement.lang = (lang === "zh") ? "zh" : ((lang === "fr") ? "fr" : "en");
+  localStorage.setItem("site_lang", window.__lang);
+
+  var map = {
+    "chip-system": "system_online",
+    "chip-rtv": "real_time_vision",
+    "chip-edge": "edge_vision",
+    "chip-safety": "safety_ai",
+    "label-clock": "lab_clock",
+    "hero-kicker-text": "hero_kicker",
+    "email-label": "email_label",
+    "bio-1": "bio_1",
+    "bio-2": "bio_2",
+    "bio-3": "bio_3",
+    "last-update-text": "last_update",
+    "now-title-text": "now_title",
+    "now-body-text": "now_body",
+    "heading-news": "heading_news",
+    "heading-awards": "heading_awards",
+    "heading-research": "heading_research",
+    "heading-misc": "heading_misc"
+  };
+
+  Object.keys(map).forEach(function (id) {
+    var el = document.getElementById(id);
+    if (!el) {
+      return;
+    }
+    var value = t[map[id]];
+    if (typeof value === "string") {
+      el.innerHTML = value;
+    }
+  });
+
+  var btn = document.getElementById("myBtn");
+  var more = document.getElementById("more");
+  if (btn && more) {
+    btn.innerHTML = (more.style.display === "inline") ? t.hide : t.show_more;
+  }
+
+  ["lang-en", "lang-zh", "lang-fr"].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) {
+      b.classList.toggle("active", id === ("lang-" + lang));
+    }
+  });
+}
+
+async function detectLangByIp() {
+  try {
+    var response = await fetch("https://ipapi.co/json/", { cache: "no-store" });
+    if (!response.ok) {
+      return "en";
+    }
+    var data = await response.json();
+    var cc = (data && data.country_code) ? String(data.country_code).toUpperCase() : "";
+    if (cc === "CN") {
+      return "zh";
+    }
+    var frenchCountries = new Set([
+      "FR", "BE", "CH", "LU", "MC", "CA", "SN", "CI", "CM", "CD", "CG", "BJ", "BF",
+      "BI", "CF", "TD", "DJ", "GA", "GN", "HT", "KM", "MG", "ML", "NE", "RW", "TG",
+      "VU", "GQ"
+    ]);
+    if (frenchCountries.has(cc)) {
+      return "fr";
+    }
+  } catch (error) {
+    return "en";
+  }
+  return "en";
+}
+
 function updateCommandClock() {
   var clockEl = document.getElementById("command-clock");
   if (!clockEl) {
     return;
   }
   clockEl.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+}
+
+function formatStarCount(count) {
+  if (typeof count !== "number" || !isFinite(count) || count < 0) {
+    return null;
+  }
+  if (count >= 1000000) {
+    return (count / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  if (count >= 1000) {
+    return (count / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+  }
+  return String(count);
+}
+
+function extractGitHubRepo(url) {
+  if (!url) {
+    return null;
+  }
+  var m = String(url).match(/^https?:\/\/github\.com\/([^\/]+\/[^\/?#]+)/i);
+  if (!m || !m[1]) {
+    return null;
+  }
+  return m[1].replace(/\.git$/i, "");
+}
+
+async function hydrateGitHubStars() {
+  var links = Array.prototype.slice.call(document.querySelectorAll("a.github-button[data-show-count=\"true\"]"));
+  if (!links.length) {
+    return;
+  }
+
+  var cacheKey = "gh_repo_stars_v1";
+  var cacheTTL = 12 * 60 * 60 * 1000;
+  var cache = {};
+  try {
+    cache = JSON.parse(localStorage.getItem(cacheKey) || "{}") || {};
+  } catch (e) {
+    cache = {};
+  }
+
+  var now = Date.now();
+  var reposToFetch = [];
+  links.forEach(function (link) {
+    var repo = extractGitHubRepo(link.getAttribute("href"));
+    if (!repo) {
+      link.textContent = "Star";
+      return;
+    }
+    link.classList.add("is-loading");
+    link.dataset.repo = repo;
+    var cached = cache[repo];
+    if (cached && typeof cached.stars === "number" && (now - cached.ts) < cacheTTL) {
+      var formatted = formatStarCount(cached.stars);
+      link.textContent = formatted ? ("Star " + formatted) : "Star";
+      link.classList.remove("is-loading");
+    } else {
+      link.textContent = "Star ...";
+      reposToFetch.push(repo);
+    }
+  });
+
+  var uniqueRepos = Array.from(new Set(reposToFetch));
+  await Promise.all(uniqueRepos.map(async function (repo) {
+    try {
+      var resp = await fetch("https://api.github.com/repos/" + repo, { cache: "no-store" });
+      if (!resp.ok) {
+        return;
+      }
+      var data = await resp.json();
+      if (typeof data.stargazers_count !== "number") {
+        return;
+      }
+      cache[repo] = { stars: data.stargazers_count, ts: Date.now() };
+    } catch (e) {
+      return;
+    }
+  }));
+
+  try {
+    localStorage.setItem(cacheKey, JSON.stringify(cache));
+  } catch (e) {
+    // no-op
+  }
+
+  links.forEach(function (link) {
+    var repo = link.dataset.repo;
+    if (!repo) {
+      return;
+    }
+    var data = cache[repo];
+    var formatted = data ? formatStarCount(data.stars) : null;
+    link.textContent = formatted ? ("Star " + formatted) : "Star";
+    link.classList.remove("is-loading");
+  });
 }
 
 function activatePageMotion() {
@@ -65,7 +303,21 @@ function activatePageMotion() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  var savedLang = localStorage.getItem("site_lang");
+  if (savedLang && window.__i18n[savedLang]) {
+    applyLanguage(savedLang);
+  } else {
+    detectLangByIp().then(applyLanguage);
+  }
+  var enBtn = document.getElementById("lang-en");
+  var zhBtn = document.getElementById("lang-zh");
+  var frBtn = document.getElementById("lang-fr");
+  if (enBtn) enBtn.addEventListener("click", function () { applyLanguage("en"); });
+  if (zhBtn) zhBtn.addEventListener("click", function () { applyLanguage("zh"); });
+  if (frBtn) frBtn.addEventListener("click", function () { applyLanguage("fr"); });
+
   activatePageMotion();
+  hydrateGitHubStars();
   updateCommandClock();
   setInterval(updateCommandClock, 1000);
 });
@@ -80,38 +332,43 @@ document.addEventListener("DOMContentLoaded", function () {
       <td style="padding:0px">
         <section class="command-bar">
           <div class="command-left">
-            <span class="system-pill"><span class="system-dot"></span>System Online</span>
-            <span class="chip">Real-time Vision</span>
-            <span class="chip">Edge Vision</span>
-            <span class="chip">Safety AI</span>
+            <span class="system-pill"><span class="system-dot"></span><span id="chip-system">System online</span></span>
+            <span class="chip" id="chip-rtv">Real-time Vision</span>
+            <span class="chip" id="chip-edge">Edge Vision</span>
+            <span class="chip" id="chip-safety">Safety AI</span>
           </div>
           <div class="command-right">
-            <span class="label">Lab clock</span>
+            <span class="label" id="label-clock">Lab clock</span>
             <span id="command-clock">--:--:--</span>
+            <div class="lang-switch">
+              <button type="button" id="lang-en" class="lang-btn active">EN</button>
+              <button type="button" id="lang-zh" class="lang-btn">中文</button>
+              <button type="button" id="lang-fr" class="lang-btn">FR</button>
+            </div>
           </div>
         </section>
 
         <section class="hero-section">
           <div class="hero-text">
-            <p class="hero-kicker">Reliable Vision AI for the Real World</p>
+            <p class="hero-kicker" id="hero-kicker-text">Reliable Vision AI for the Real World</p>
             <h1><name>Xi Shen</name></h1>
-            <p class="hero-contact">Email: <i><u>shenxiluc at gmail dot com</u></i></p>
-            <p>
-              I am the Co-founder and Chief Scientist at <a href="https://www.intellindust.com/">Intellindust</a> (Shenzhen, China), where our team
+            <p class="hero-contact"><span id="email-label">Email:</span> <i><u>shenxiluc at gmail dot com</u></i></p>
+            <p id="bio-1">
+              I am the Co-founder and Chief Scientist at <a href="https://www.intellindust.com/">Intellindust</a> (Shenzhen, China). Our team
               (<a href="https://intellindust-ai-lab.github.io/">Intellindust AI Lab</a>) builds reliable and efficient computer vision
               systems for real-time applications on edge devices with limited NPU compute.
             </p>
-            <p>
+            <p id="bio-2">
               I completed my Ph.D. in the <a href="http://imagine.enpc.fr/">IMAGINE team</a> at
-              <a href="http://www.enpc.fr/">Ecole des Ponts ParisTech</a>. Previously, I worked as a Senior Researcher at Tencent AI Lab.
+              <a href="http://www.enpc.fr/">Ecole des Ponts ParisTech</a>, and I lived in lovely Paris, France for 10 years. Previously, I worked as a Senior Researcher at Tencent AI Lab.
             </p>
-            <p>
+            <p id="bio-3">
               If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.
             </p>
-            <p class="last-update">(Last update: 2025-11-09)</p>
+            <p class="last-update" id="last-update-text">(Last update: 2025-11-09)</p>
             <div class="now-building">
-              <p class="now-title">Now Building</p>
-              <p class="now-body">Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.</p>
+              <p class="now-title" id="now-title-text">Now Building</p>
+              <p class="now-body" id="now-body-text">Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.</p>
             </div>
             <div id="circles_container">
               <a href='http://github.com/XiSHEN0220'><img class="iconImg" src="images/github.png" alt="Github">GitHub</a>
@@ -129,7 +386,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr><td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>📰 News</heading>
+              <heading id="heading-news">📰 News</heading>
   <hr/>
     
         <ul class="news-list" style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
@@ -217,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </li>
         </span>
         <div style="text-align:center">
-          <button class="button-2" role="button" onclick="LoadMore()" id="myBtn">SHOW MORE...</button>
+          <button class="button-2" role="button" onclick="LoadMore()" id="myBtn">Show more</button>
         </div>
         </ul>
   </tbody></table>
@@ -227,7 +484,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <tbody>
     <tr>
       <td style="padding:20px; width:100%; vertical-align:middle;">
-        <heading style="font-size:1.5em; font-weight:600;">🏆 Awards & Honors</heading>
+        <heading id="heading-awards" style="font-size:1.5em; font-weight:600;">🏆 Awards & Honors</heading>
         <hr style="margin:8px 0 16px 0; border:0; border-top:2px solid #ddd;"/>
 
         <ul style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
@@ -278,7 +535,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <table id="research-section" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>💡 Research</heading>
+              <heading id="heading-research">💡 Research</heading>
               <hr/>
               <p>
                 
@@ -319,7 +576,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2603.03903">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/SUREPlus">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/SUREPlus" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SUREPlus" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
             </td>
             </tr>
 
@@ -399,7 +656,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://intellindust-ai-lab.github.io/projects/FSOD-VFM/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2602.03137">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/FSOD-VFM">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/FSOD-VFM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/FSOD-VFM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
 
             </td>
             </tr>
@@ -432,7 +689,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://pokerman8.github.io/SKEL-CF/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2511.20157">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/SKEL-CF">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/SKEL-CF" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SKEL-CF" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
 
             </td>
             </tr>
@@ -463,7 +720,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://ocean146.github.io/SimROD2025/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2503.07101">[PDF]</a> &nbsp;
               <a href="https://github.com/ocean146/SimROD">[Code (GitHub)]</a>
-              <a class="github-button" href="https://github.com/ocean146/SimROD" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/ocean146/SimROD" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
 
             </td>
@@ -493,7 +750,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2305.18476">[PDF]</a> &nbsp;
               <a href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt">[Code (GitHub)]</a>
-              <a class="github-button" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
 
             </td>
@@ -524,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://intellindust-ai-lab.github.io/projects/DEIMv2/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2509.20787">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/DEIMv2">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/DEIMv2" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/DEIMv2" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
             </td>
             </tr>
 
@@ -555,7 +812,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://arxiv.org/abs/2412.04234">[PDF]</a> &nbsp;
               <a href="https://www.shihuahuang.cn/DEIM/resrc/DEIM-Slides.pdf">[Slides]</a> &nbsp;
               <a href="https://github.com/ShihuaHuang95/DEIM">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/ShihuaHuang95/DEIM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/ShihuaHuang95/DEIM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
             </td>
             </tr>
 
@@ -611,7 +868,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://yutingli0606.github.io/HTR-VT/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2409.08573">[PDF]</a> &nbsp;
               <a href="https://github.com/YutingLi0606/HTR-VT">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/YutingLi0606/HTR-VT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/HTR-VT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
             </td>
             </tr>
 
@@ -642,7 +899,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://nifangbaage.github.io/DATTT/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2403.04258">[PDF]</a> &nbsp;
               <a href="hhttps://github.com/NiFangBaAGe/DATTT">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/NiFangBaAGe/DATTT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/DATTT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
             </td>
             </tr>
 
@@ -677,11 +934,11 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://yutingli0606.github.io/SURE/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2403.00543.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/YutingLi0606/SURE">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/YutingLi0606/SURE" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/SURE" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
             </br>
               <a href="https://github.com/LIYangggggg/SSB-OSR/blob/main/docs/SURE_OOD.pdf">[Tech. Report SURE-OOD]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/SSB-OSR">[Code SURE-OOD (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Intellindust-AI-Lab/SSB-OSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SSB-OSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
                
             </td>
             </tr>
@@ -714,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://www.m-psi.fr/Papers/TokenCut2022/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2209.00383">[PDF]</a> &nbsp;
               <a href="https://github.com/YangtaoWANG95/TokenCut_video">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut_video" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut_video" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
             </td>
             </tr>
 
@@ -745,7 +1002,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://github.com/zyhbili/LivelySpeaker">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2309.09294">[PDF]</a> &nbsp;
               <a href="https://github.com/zyhbili/LivelySpeaker">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/zyhbili/LivelySpeaker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/zyhbili/LivelySpeaker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
             </td>
             </tr>
 
@@ -773,7 +1030,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2303.10883.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt">[Code (GitHub)]</a>
-              <a class="github-button" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
 
             </td>
@@ -807,7 +1064,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="hhttps://arxiv.org/abs/2301.06052">[PDF]</a> &nbsp;
               <a href="https://github.com/Mael-zys/T2M-GPT">[Code (GitHub)]</a> &nbsp;
               <a href="https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing">[Online demo (Colab)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Mael-zys/T2M-GPT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Mael-zys/T2M-GPT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
               
 
@@ -847,7 +1104,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://sadtalker.github.io/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2211.12194.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/Winfredy/SadTalker">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/Winfredy/SadTalker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Winfredy/SadTalker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
 
             </td>
             </tr>
@@ -877,7 +1134,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://github.com/dulucas/siMLPe">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2207.01567">[PDF]</a> &nbsp;
               <a href="https://github.com/dulucas/siMLPe">[siMLPe Code (GitHub)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/dulucas/siMLPe" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/dulucas/siMLPe" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
 
             </td>
@@ -909,7 +1166,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://yingyichen-cyy.github.io/CompressFeatNoisyLabels/">[PDF]</a> &nbsp;
               <a href="https://github.com/yingyichen-cyy/Nested-Co-teaching">[Code (GitHub)]</a> &nbsp;
               <a href="https://www.youtube.com/watch?v=y9zBDioKMM0&t=5s">[Workshop Video (7 mins)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/yingyichen-cyy/Nested-Co-teaching" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/yingyichen-cyy/Nested-Co-teaching" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
 
             </td>
@@ -943,7 +1200,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://colab.research.google.com/github/YangtaoWANG95/TokenCut/blob/master/inference_demo.ipynb">[Colab]</a> &nbsp;
               <a href="https://huggingface.co/spaces/akhaliq/TokenCut">[Gradio Demo]</a> &nbsp;
               <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/wangyan/tokencut">[Code (GitLab)]</a> &nbsp;
-              <a class="github-button" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
 
             </td>
@@ -1025,7 +1282,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://github.com/XiSHEN0220/SegSwap">[Code]</a> &nbsp;
               <a href="https://youtu.be/9pKwNGZPDr8">[Youtube Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/SegSwap/slides.pdf">[Slides]</a> &nbsp;
-              <a class="github-button" href="https://github.com/XiSHEN0220/SegSwap" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SegSwap" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
 
             </td>
@@ -1056,7 +1313,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://papers.nips.cc/paper/2021/file/d9fc0cdb67638d50f411432d0d41d0ba-Paper.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/SSR">[Code]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/SSR/ssr.mp4">[Video]</a> &nbsp;
-              <a class="github-button" href="https://github.com/XiSHEN0220/SSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
             </td>
         </tr>
 
@@ -1088,7 +1345,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://youtu.be/yXe7JHSJDUs">[Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/ICDAR_ImageCollation_Slides.pdf"> [Slides] </a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/icdar21.pdf"> [Poster] </a> &nbsp;
-              <a class="github-button" href="https://github.com/Rykoua/ImageCollation" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Rykoua/ImageCollation" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
             </td>
         </tr>
@@ -1121,7 +1378,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://youtu.be/ltZpqRtuA6A">[Demo]</a> &nbsp;
               <a href="https://youtu.be/FXqCZlmipdM">[Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/slide_ransac_flow.pptx"> [Slides] </a> &nbsp;
-              <a class="github-button" href="https://github.com/XiSHEN0220/RANSAC-Flow" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/RANSAC-Flow" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
             </td>
         </tr>
@@ -1152,7 +1409,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </br>
               <a href="https://openreview.net/forum?id=Hkg-xgrYvH">[PDF]</a> &nbsp;
               <a href="https://github.com/hushell/sib_meta_learn">[Code]</a> &nbsp;
-              <a class="github-button" href="https://github.com/hushell/sib_meta_learn" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/hushell/sib_meta_learn" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
               
             </td>
         </tr>
@@ -1189,7 +1446,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="http://imagine.enpc.fr/~shenx/Watermark/watermarkReco.pptx">[Slides]</a> &nbsp;
               <a href="https://filigranes.inria.fr/#/filigrane-search">[Web App]</a>&nbsp;
               <a href="https://hal.archives-ouvertes.fr/hal-02513038/">[Paper on Web App]</a> &nbsp;
-              <a class="github-button" href="https://github.com/XiSHEN0220/WatermarkReco" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/WatermarkReco" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
               
             </td>
@@ -1228,7 +1485,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://github.com/XiSHEN0220/ArtMiner">[Code]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/data/Brueghel.zip">[Dataset]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ArtMiner/artMiner.pdf"> [Slides] </a> &nbsp;
-              <a class="github-button" href="https://github.com/XiSHEN0220/ArtMiner" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/ArtMiner" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
             </td>
         </tr>
@@ -1258,7 +1515,7 @@ document.addEventListener("DOMContentLoaded", function () {
               </br>
               <a href="https://openreview.net/pdf?id=HkljioCcFQ">[PDF]</a> &nbsp;
               <a href="https://github.com/yyuanad/MAAN">[Code]</a> &nbsp;
-              <a class="github-button" href="https://github.com/yyuanad/MAAN" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/yyuanad/MAAN" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
               
             </td>
         </tr>
@@ -1273,7 +1530,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>🎯 Misc.</heading>
+              <heading id="heading-misc">🎯 Misc.</heading>
               <hr/>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <h3> Academic Services </h3>
