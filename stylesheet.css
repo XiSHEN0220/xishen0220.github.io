@@ -244,28 +244,21 @@ span.highlight {
 a.github-button {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  border: 1px solid #e7c7ab;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.86);
-  font-family: "Rajdhani", "Lato", sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #854423;
-  line-height: 1.5;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  line-height: 1;
   vertical-align: middle;
 }
 
 a.github-button::before {
-  content: "★";
-  font-size: 11px;
-  color: #c8743a;
+  content: none;
 }
 
-a.github-button.is-loading {
-  opacity: 0.78;
+a.github-button .star-badge {
+  height: 20px;
+  width: auto;
+  display: inline-block;
 }
 
 

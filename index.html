@@ -191,19 +191,6 @@ function updateCommandClock() {
   clockEl.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
 }
 
-function formatStarCount(count) {
-  if (typeof count !== "number" || !isFinite(count) || count < 0) {
-    return null;
-  }
-  if (count >= 1000000) {
-    return (count / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
-  }
-  if (count >= 1000) {
-    return (count / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-  }
-  return String(count);
-}
-
 function extractGitHubRepo(url) {
   if (!url) {
     return null;
@@ -215,74 +202,30 @@ function extractGitHubRepo(url) {
   return m[1].replace(/\.git$/i, "");
 }
 
-async function hydrateGitHubStars() {
+function hydrateGitHubStars() {
   var links = Array.prototype.slice.call(document.querySelectorAll("a.github-button[data-show-count=\"true\"]"));
   if (!links.length) {
     return;
   }
 
-  var cacheKey = "gh_repo_stars_v1";
-  var cacheTTL = 12 * 60 * 60 * 1000;
-  var cache = {};
-  try {
-    cache = JSON.parse(localStorage.getItem(cacheKey) || "{}") || {};
-  } catch (e) {
-    cache = {};
-  }
-
-  var now = Date.now();
-  var reposToFetch = [];
+  var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
   links.forEach(function (link) {
     var repo = extractGitHubRepo(link.getAttribute("href"));
     if (!repo) {
       link.textContent = "Star";
       return;
     }
-    link.classList.add("is-loading");
-    link.dataset.repo = repo;
-    var cached = cache[repo];
-    if (cached && typeof cached.stars === "number" && (now - cached.ts) < cacheTTL) {
-      var formatted = formatStarCount(cached.stars);
-      link.textContent = formatted ? ("Star " + formatted) : "Star";
-      link.classList.remove("is-loading");
-    } else {
-      link.textContent = "Star ...";
-      reposToFetch.push(repo);
-    }
-  });
-
-  var uniqueRepos = Array.from(new Set(reposToFetch));
-  await Promise.all(uniqueRepos.map(async function (repo) {
-    try {
-      var resp = await fetch("https://api.github.com/repos/" + repo, { cache: "no-store" });
-      if (!resp.ok) {
-        return;
-      }
-      var data = await resp.json();
-      if (typeof data.stargazers_count !== "number") {
-        return;
-      }
-      cache[repo] = { stars: data.stargazers_count, ts: Date.now() };
-    } catch (e) {
-      return;
-    }
-  }));
-
-  try {
-    localStorage.setItem(cacheKey, JSON.stringify(cache));
-  } catch (e) {
-    // no-op
-  }
-
-  links.forEach(function (link) {
-    var repo = link.dataset.repo;
-    if (!repo) {
-      return;
-    }
-    var data = cache[repo];
-    var formatted = data ? formatStarCount(data.stars) : null;
-    link.textContent = formatted ? ("Star " + formatted) : "Star";
-    link.classList.remove("is-loading");
+    var badge = document.createElement("img");
+    badge.className = "star-badge";
+    badge.alt = "GitHub stars";
+    badge.loading = "lazy";
+    badge.decoding = "async";
+    badge.src = "https://img.shields.io/github/stars/" + repo + "?style=social&label=Star&cacheSeconds=86400&v=" + dayStamp;
+    badge.addEventListener("error", function () {
+      link.textContent = "Star";
+    });
+    link.textContent = "";
+    link.appendChild(badge);
   });
 }
 
