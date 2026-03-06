@@ -215,17 +215,25 @@ function hydrateGitHubStars() {
       link.textContent = "Star";
       return;
     }
-    var badge = document.createElement("img");
-    badge.className = "star-badge";
-    badge.alt = "GitHub stars";
-    badge.loading = "lazy";
-    badge.decoding = "async";
-    badge.src = "https://img.shields.io/github/stars/" + repo + "?style=social&label=Star&cacheSeconds=86400&v=" + dayStamp;
-    badge.addEventListener("error", function () {
-      link.textContent = "Star";
-    });
-    link.textContent = "";
-    link.appendChild(badge);
+    link.textContent = "Star ...";
+    fetch("https://img.shields.io/github/stars/" + repo + ".json?label=Star&cacheSeconds=86400&v=" + dayStamp, { cache: "no-store" })
+      .then(function (resp) {
+        if (!resp.ok) {
+          throw new Error("badge request failed");
+        }
+        return resp.json();
+      })
+      .then(function (data) {
+        var msg = data && data.value ? String(data.value) : "";
+        if (!msg || msg.toLowerCase() === "invalid") {
+          link.textContent = "Star";
+          return;
+        }
+        link.textContent = "Star " + msg;
+      })
+      .catch(function () {
+        link.textContent = "Star";
+      });
   });
 }
 
