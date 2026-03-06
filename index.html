@@ -208,10 +208,55 @@ function hydrateGitHubStars() {
     return;
   }
 
+  function formatCompactStar(count) {
+    if (typeof count !== "number" || !isFinite(count) || count < 0) {
+      return null;
+    }
+    if (count >= 1000000) {
+      return (count / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (count >= 1000) {
+      return (count / 1000).toFixed(1).replace(/\.0$/, "") + "k";
+    }
+    return String(count);
+  }
+
   function setStarDisplay(link, value, loading) {
     var safeValue = (value && String(value).trim()) ? String(value).trim() : "--";
     link.innerHTML = "<span class=\"star-label\">Star</span><span class=\"star-value\">" + safeValue + "</span>";
     link.classList.toggle("is-loading", !!loading);
+  }
+
+  var cacheKey = "gh_star_display_cache_v2";
+  var cacheTTL = 7 * 24 * 60 * 60 * 1000;
+  var starCache = {};
+  try {
+    starCache = JSON.parse(localStorage.getItem(cacheKey) || "{}") || {};
+  } catch (e) {
+    starCache = {};
+  }
+
+  function getCachedValue(repo) {
+    var item = starCache[repo];
+    if (!item || !item.value || !item.ts) {
+      return null;
+    }
+    if ((Date.now() - item.ts) > cacheTTL) {
+      return null;
+    }
+    return String(item.value);
+  }
+
+  function updateCache(repo, value) {
+    if (!repo || !value) {
+      return;
+    }
+    starCache[repo] = { value: String(value), ts: Date.now() };
+    try {
+      localStorage.setItem(cacheKey, JSON.stringify(starCache));
+    } catch (e) {
+      // no-op
+    }
   }
 
   var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
@@ -221,7 +266,10 @@ function hydrateGitHubStars() {
       setStarDisplay(link, "--", false);
       return;
     }
-    setStarDisplay(link, "...", true);
+
+    var cached = getCachedValue(repo);
+    setStarDisplay(link, cached || "...", true);
+
     fetch("https://img.shields.io/github/stars/" + repo + ".json?label=Star&cacheSeconds=86400&v=" + dayStamp, { cache: "no-store" })
       .then(function (resp) {
         if (!resp.ok) {
@@ -232,13 +280,31 @@ function hydrateGitHubStars() {
       .then(function (data) {
         var msg = data && data.value ? String(data.value) : "";
         if (!msg || msg.toLowerCase() === "invalid") {
-          setStarDisplay(link, "--", false);
-          return;
+          throw new Error("invalid shields value");
         }
+        updateCache(repo, msg);
         setStarDisplay(link, msg, false);
       })
       .catch(function () {
-        setStarDisplay(link, "--", false);
+        fetch("https://api.github.com/repos/" + repo, { cache: "no-store" })
+          .then(function (resp) {
+            if (!resp.ok) {
+              throw new Error("github api fallback failed");
+            }
+            return resp.json();
+          })
+          .then(function (data) {
+            var value = formatCompactStar(data && data.stargazers_count);
+            if (!value) {
+              throw new Error("invalid github api value");
+            }
+            updateCache(repo, value);
+            setStarDisplay(link, value, false);
+          })
+          .catch(function () {
+            var fallback = getCachedValue(repo) || "--";
+            setStarDisplay(link, fallback, false);
+          });
       });
   });
 }
