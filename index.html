@@ -208,14 +208,20 @@ function hydrateGitHubStars() {
     return;
   }
 
+  function setStarDisplay(link, value, loading) {
+    var safeValue = (value && String(value).trim()) ? String(value).trim() : "--";
+    link.innerHTML = "<span class=\"star-label\">Star</span><span class=\"star-value\">" + safeValue + "</span>";
+    link.classList.toggle("is-loading", !!loading);
+  }
+
   var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
   links.forEach(function (link) {
     var repo = extractGitHubRepo(link.getAttribute("href"));
     if (!repo) {
-      link.textContent = "Star";
+      setStarDisplay(link, "--", false);
       return;
     }
-    link.textContent = "Star ...";
+    setStarDisplay(link, "...", true);
     fetch("https://img.shields.io/github/stars/" + repo + ".json?label=Star&cacheSeconds=86400&v=" + dayStamp, { cache: "no-store" })
       .then(function (resp) {
         if (!resp.ok) {
@@ -226,13 +232,13 @@ function hydrateGitHubStars() {
       .then(function (data) {
         var msg = data && data.value ? String(data.value) : "";
         if (!msg || msg.toLowerCase() === "invalid") {
-          link.textContent = "Star";
+          setStarDisplay(link, "--", false);
           return;
         }
-        link.textContent = "Star " + msg;
+        setStarDisplay(link, msg, false);
       })
       .catch(function () {
-        link.textContent = "Star";
+        setStarDisplay(link, "--", false);
       });
   });
 }
