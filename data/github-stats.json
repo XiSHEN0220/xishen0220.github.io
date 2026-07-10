@@ -1,0 +1,145 @@
+{
+  "generated_at": "2026-07-10T10:59:26.943Z",
+  "repos": {
+    "intellindust-ai-lab/skel-cf": {
+      "stars": 65,
+      "forks": 4,
+      "url": "https://github.com/Intellindust-AI-Lab/SKEL-CF"
+    },
+    "intellindust-ai-lab/sureplus": {
+      "stars": 9,
+      "forks": 0,
+      "url": "https://github.com/Intellindust-AI-Lab/SUREPlus"
+    },
+    "intellindust-ai-lab/ft-fsod": {
+      "stars": 42,
+      "forks": 3,
+      "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
+    },
+    "intellindust-ai-lab/edgecrafter": {
+      "stars": 274,
+      "forks": 34,
+      "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
+    },
+    "intellindust-ai-lab/fsod-vfm": {
+      "stars": 91,
+      "forks": 5,
+      "url": "https://github.com/Intellindust-AI-Lab/FSOD-VFM"
+    },
+    "ocean146/simrod": {
+      "stars": 30,
+      "forks": 10,
+      "url": "https://github.com/ocean146/SimROD"
+    },
+    "nifangbaage/explicit-visual-prompt": {
+      "stars": 230,
+      "forks": 16,
+      "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
+    },
+    "intellindust-ai-lab/deimv2": {
+      "stars": 1910,
+      "forks": 206,
+      "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
+    },
+    "shihuahuang95/deim": {
+      "stars": 1573,
+      "forks": 200,
+      "url": "https://github.com/Intellindust-AI-Lab/DEIM"
+    },
+    "yutingli0606/htr-vt": {
+      "stars": 134,
+      "forks": 16,
+      "url": "https://github.com/Intellindust-AI-Lab/HTR-VT"
+    },
+    "nifangbaage/dattt": {
+      "stars": 29,
+      "forks": 2,
+      "url": "https://github.com/NiFangBaAGe/DATTT"
+    },
+    "yutingli0606/sure": {
+      "stars": 76,
+      "forks": 11,
+      "url": "https://github.com/Intellindust-AI-Lab/SURE"
+    },
+    "intellindust-ai-lab/ssb-osr": {
+      "stars": 29,
+      "forks": 5,
+      "url": "https://github.com/Intellindust-AI-Lab/SSB-OSR"
+    },
+    "yangtaowang95/tokencut_video": {
+      "stars": 64,
+      "forks": 4,
+      "url": "https://github.com/YangtaoWANG95/TokenCut_video"
+    },
+    "zyhbili/livelyspeaker": {
+      "stars": 87,
+      "forks": 11,
+      "url": "https://github.com/zyhbili/LivelySpeaker"
+    },
+    "mael-zys/t2m-gpt": {
+      "stars": 768,
+      "forks": 66,
+      "url": "https://github.com/Mael-zys/T2M-GPT"
+    },
+    "winfredy/sadtalker": {
+      "stars": 13944,
+      "forks": 2659,
+      "url": "https://github.com/OpenTalker/SadTalker"
+    },
+    "dulucas/simlpe": {
+      "stars": 162,
+      "forks": 27,
+      "url": "https://github.com/dulucas/siMLPe"
+    },
+    "yingyichen-cyy/nested-co-teaching": {
+      "stars": 51,
+      "forks": 6,
+      "url": "https://github.com/yingyichen-cyy/Nested-Co-teaching"
+    },
+    "yangtaowang95/tokencut": {
+      "stars": 338,
+      "forks": 36,
+      "url": "https://github.com/YangtaoWANG95/TokenCut"
+    },
+    "xishen0220/segswap": {
+      "stars": 53,
+      "forks": 3,
+      "url": "https://github.com/XiSHEN0220/SegSwap"
+    },
+    "xishen0220/ssr": {
+      "stars": 31,
+      "forks": 4,
+      "url": "https://github.com/XiSHEN0220/SSR"
+    },
+    "rykoua/imagecollation": {
+      "stars": 14,
+      "forks": 3,
+      "url": "https://github.com/Rykoua/ImageCollation"
+    },
+    "xishen0220/ransac-flow": {
+      "stars": 451,
+      "forks": 78,
+      "url": "https://github.com/XiSHEN0220/RANSAC-Flow"
+    },
+    "hushell/sib_meta_learn": {
+      "stars": 58,
+      "forks": 8,
+      "url": "https://github.com/hushell/sib_meta_learn"
+    },
+    "xishen0220/watermarkreco": {
+      "stars": 59,
+      "forks": 10,
+      "url": "https://github.com/XiSHEN0220/WatermarkReco"
+    },
+    "xishen0220/artminer": {
+      "stars": 115,
+      "forks": 19,
+      "url": "https://github.com/XiSHEN0220/ArtMiner"
+    },
+    "yyuanad/maan": {
+      "stars": 34,
+      "forks": 4,
+      "url": "https://github.com/yyuanad/MAAN"
+    }
+  }
+}

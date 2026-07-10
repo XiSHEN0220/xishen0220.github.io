@@ -1,384 +1,67 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Xi Shen</title>
-  
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Xi Shen | Reliable and Efficient Vision AI</title>
   <meta name="author" content="Xi Shen">
+  <meta name="description" content="Xi Shen is Co-founder and Chief Scientist at Intellindust, working on reliable, efficient, and open-world computer vision for real-time edge deployment.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    #more {display: none;}
-  </style>
+  <meta name="theme-color" content="#f4ede3">
+  <link rel="canonical" href="https://xishen0220.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Xi Shen | Reliable and Efficient Vision AI">
+  <meta property="og:description" content="Research in reliable vision, edge vision, open-world learning, and efficient AI systems.">
+  <meta property="og:url" content="https://xishen0220.github.io/">
+  <meta property="og:image" content="https://xishen0220.github.io/images/xishen_ai_sr.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260307c">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css?v=20260710a">
   <link rel="icon" type="image/png" href="images/web_icon.jpeg">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="site.js?v=20260710a" defer></script>
+
+
 </head>
 
-<script>
-function LoadMore() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
-  var t = (window.__i18n && window.__i18n[window.__lang]) ? window.__i18n[window.__lang] : null;
-
-  if (!dots || !moreText || !btnText) {
-    return;
-  }
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = t ? t.show_more : "Show more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = t ? t.hide : "Hide";
-    moreText.style.display = "inline";
-  }
-}
-</script>
-
-<script>
-window.__i18n = {
-  en: {
-    system_online: "System online",
-    real_time_vision: "Real-time Vision",
-    edge_vision: "Edge Vision",
-    safety_ai: "Safety AI",
-    lab_clock: "Lab clock",
-    hero_kicker: "Reliable Vision AI for the Real World",
-    email_label: "Email:",
-    bio_1: "I am the Co-founder and Chief Scientist at <a href=\"https://www.intellindust.com/\">Intellindust</a> (Shenzhen, China). Our team (<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>) builds reliable and efficient computer vision systems for real-time applications on edge devices with limited NPU compute.",
-    bio_2: "I completed my Ph.D. in the <a href=\"http://imagine.enpc.fr/\">IMAGINE team</a> at <a href=\"http://www.enpc.fr/\">Ecole des Ponts ParisTech</a>, and I lived in lovely Paris, France for 10 years. Previously, I worked as a Senior Researcher at Tencent AI Lab.",
-    bio_3: "If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.",
-    last_update: "(Last update: 2026-06-18)",
-    now_title: "Now Building",
-    now_body: "Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.",
-    heading_news: "📰 News",
-    heading_awards: "🏆 Awards & Honors",
-    heading_research: "💡 Research",
-    heading_misc: "🎯 Misc.",
-    show_more: "Show more",
-    hide: "Hide"
-  },
-  zh: {
-    system_online: "系统在线",
-    real_time_vision: "实时视觉",
-    edge_vision: "边缘视觉",
-    safety_ai: "安全人工智能",
-    lab_clock: "实验室时钟",
-    hero_kicker: "面向真实世界的可靠视觉人工智能",
-    email_label: "邮箱：",
-    bio_1: "我是 <a href=\"https://www.intellindust.com/\">Intellindust</a>（中国深圳）的联合创始人兼首席科学家。我们的团队（<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>）专注于在有限 NPU 算力的边缘设备上构建可靠、高效的实时计算机视觉系统。",
-    bio_2: "我在 <a href=\"http://www.enpc.fr/\">巴黎高科国立桥路学院</a> 的 <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> 团队完成博士学位，并在法国美丽的巴黎生活了 10 年。此前我曾在腾讯 AI Lab 担任高级研究员。",
-    bio_3: "如果你对安全人工智能或实时视觉高效训练相关实习感兴趣，欢迎邮件联系我。",
-    last_update: "（最后更新：2026-06-18）",
-    now_title: "当前在做",
-    now_body: "面向实时边缘部署的鲁棒高效开放世界视觉模型，当前重点是新一代边缘视觉模型。",
-    heading_news: "📰 动态",
-    heading_awards: "🏆 奖项与荣誉",
-    heading_research: "💡 研究",
-    heading_misc: "🎯 其他",
-    show_more: "显示更多",
-    hide: "收起"
-  },
-  fr: {
-    system_online: "Système en ligne",
-    real_time_vision: "Vision en temps réel",
-    edge_vision: "Vision embarquée",
-    safety_ai: "IA sûre",
-    lab_clock: "Horloge du labo",
-    hero_kicker: "Une IA visuelle fiable pour le monde réel",
-    email_label: "E-mail :",
-    bio_1: "Je suis cofondateur et directeur scientifique d'<a href=\"https://www.intellindust.com/\">Intellindust</a> (Shenzhen, Chine). Au sein de notre équipe (<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>), nous développons des systèmes de vision par ordinateur fiables et efficaces pour des applications en temps réel sur des appareils embarqués disposant d'une puissance NPU limitée.",
-    bio_2: "J'ai effectué mon doctorat au sein de l'équipe <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> à <a href=\"http://www.enpc.fr/\">l'Ecole des Ponts ParisTech</a>, et j'ai vécu dix ans dans la belle ville de Paris, en France. J'ai ensuite travaillé comme Senior Researcher chez Tencent AI Lab.",
-    bio_3: "Si vous êtes intéressé par un stage autour de la sûreté de l'IA et de l'entraînement efficace pour la vision en temps réel, n'hésitez pas à me contacter par e-mail.",
-    last_update: "(Dernière mise à jour : 2026-06-18)",
-    now_title: "En cours",
-    now_body: "Des modèles de vision open-world robustes et efficaces pour un déploiement embarqué en temps réel, avec un accent actuel sur la prochaine génération de modèles de vision embarquée.",
-    heading_news: "📰 Actualités",
-    heading_awards: "🏆 Prix et distinctions",
-    heading_research: "💡 Recherche",
-    heading_misc: "🎯 Divers",
-    show_more: "Afficher plus",
-    hide: "Masquer"
-  }
-};
-window.__lang = "en";
-
-function applyLanguage(lang) {
-  var t = window.__i18n[lang] || window.__i18n.en;
-  window.__lang = lang;
-  document.documentElement.lang = (lang === "zh") ? "zh" : ((lang === "fr") ? "fr" : "en");
-  localStorage.setItem("site_lang", window.__lang);
-
-  var map = {
-    "chip-system": "system_online",
-    "chip-rtv": "real_time_vision",
-    "chip-edge": "edge_vision",
-    "chip-safety": "safety_ai",
-    "label-clock": "lab_clock",
-    "hero-kicker-text": "hero_kicker",
-    "email-label": "email_label",
-    "bio-1": "bio_1",
-    "bio-2": "bio_2",
-    "bio-3": "bio_3",
-    "last-update-text": "last_update",
-    "now-title-text": "now_title",
-    "now-body-text": "now_body",
-    "heading-news": "heading_news",
-    "heading-awards": "heading_awards",
-    "heading-research": "heading_research",
-    "heading-misc": "heading_misc"
-  };
-
-  Object.keys(map).forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) {
-      return;
-    }
-    var value = t[map[id]];
-    if (typeof value === "string") {
-      el.innerHTML = value;
-    }
-  });
-
-  var btn = document.getElementById("myBtn");
-  var more = document.getElementById("more");
-  if (btn && more) {
-    btn.innerHTML = (more.style.display === "inline") ? t.hide : t.show_more;
-  }
-
-  ["lang-en", "lang-zh", "lang-fr"].forEach(function (id) {
-    var b = document.getElementById(id);
-    if (b) {
-      b.classList.toggle("active", id === ("lang-" + lang));
-    }
-  });
-}
-
-async function detectLangByIp() {
-  try {
-    var response = await fetch("https://ipapi.co/json/", { cache: "no-store" });
-    if (!response.ok) {
-      return "en";
-    }
-    var data = await response.json();
-    var cc = (data && data.country_code) ? String(data.country_code).toUpperCase() : "";
-    if (cc === "CN") {
-      return "zh";
-    }
-    var frenchCountries = new Set([
-      "FR", "BE", "CH", "LU", "MC", "CA", "SN", "CI", "CM", "CD", "CG", "BJ", "BF",
-      "BI", "CF", "TD", "DJ", "GA", "GN", "HT", "KM", "MG", "ML", "NE", "RW", "TG",
-      "VU", "GQ"
-    ]);
-    if (frenchCountries.has(cc)) {
-      return "fr";
-    }
-  } catch (error) {
-    return "en";
-  }
-  return "en";
-}
-
-function updateCommandClock() {
-  var clockEl = document.getElementById("command-clock");
-  if (!clockEl) {
-    return;
-  }
-  clockEl.textContent = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
-}
-
-function extractGitHubRepo(url) {
-  if (!url) {
-    return null;
-  }
-  var m = String(url).match(/^https?:\/\/github\.com\/([^\/]+\/[^\/?#]+)/i);
-  if (!m || !m[1]) {
-    return null;
-  }
-  return m[1].replace(/\.git$/i, "");
-}
-
-function hydrateGitHubStars() {
-  var links = Array.prototype.slice.call(document.querySelectorAll("a.github-button[data-show-count=\"true\"]"));
-  if (!links.length) {
-    return;
-  }
-
-  function formatCompactStar(count) {
-    if (typeof count !== "number" || !isFinite(count) || count < 0) {
-      return null;
-    }
-    if (count >= 1000000) {
-      return (count / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
-    }
-    if (count >= 1000) {
-      return (count / 1000).toFixed(1).replace(/\.0$/, "") + "k";
-    }
-    return String(count);
-  }
-
-  function setStarDisplay(link, value, loading) {
-    var safeValue = (value && String(value).trim()) ? String(value).trim() : "--";
-    link.innerHTML = "<span class=\"star-label\">Star</span><span class=\"star-value\">" + safeValue + "</span>";
-    link.classList.toggle("is-loading", !!loading);
-  }
-
-  var cacheKey = "gh_star_display_cache_v2";
-  var cacheTTL = 7 * 24 * 60 * 60 * 1000;
-  var starCache = {};
-  try {
-    starCache = JSON.parse(localStorage.getItem(cacheKey) || "{}") || {};
-  } catch (e) {
-    starCache = {};
-  }
-
-  function getCachedValue(repo) {
-    var item = starCache[repo];
-    if (!item || !item.value || !item.ts) {
-      return null;
-    }
-    if ((Date.now() - item.ts) > cacheTTL) {
-      return null;
-    }
-    return String(item.value);
-  }
-
-  function updateCache(repo, value) {
-    if (!repo || !value) {
-      return;
-    }
-    starCache[repo] = { value: String(value), ts: Date.now() };
-    try {
-      localStorage.setItem(cacheKey, JSON.stringify(starCache));
-    } catch (e) {
-      // no-op
-    }
-  }
-
-  var dayStamp = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-  links.forEach(function (link) {
-    var repo = extractGitHubRepo(link.getAttribute("href"));
-    if (!repo) {
-      setStarDisplay(link, "--", false);
-      return;
-    }
-
-    var cached = getCachedValue(repo);
-    setStarDisplay(link, cached || "...", true);
-
-    fetch("https://img.shields.io/github/stars/" + repo + ".json?label=Star&cacheSeconds=86400&v=" + dayStamp, { cache: "no-store" })
-      .then(function (resp) {
-        if (!resp.ok) {
-          throw new Error("badge request failed");
-        }
-        return resp.json();
-      })
-      .then(function (data) {
-        var msg = data && data.value ? String(data.value) : "";
-        if (!msg || msg.toLowerCase() === "invalid") {
-          throw new Error("invalid shields value");
-        }
-        updateCache(repo, msg);
-        setStarDisplay(link, msg, false);
-      })
-      .catch(function () {
-        fetch("https://api.github.com/repos/" + repo, { cache: "no-store" })
-          .then(function (resp) {
-            if (!resp.ok) {
-              throw new Error("github api fallback failed");
-            }
-            return resp.json();
-          })
-          .then(function (data) {
-            var value = formatCompactStar(data && data.stargazers_count);
-            if (!value) {
-              throw new Error("invalid github api value");
-            }
-            updateCache(repo, value);
-            setStarDisplay(link, value, false);
-          })
-          .catch(function () {
-            var fallback = getCachedValue(repo) || "--";
-            setStarDisplay(link, fallback, false);
-          });
-      });
-  });
-}
-
-function activatePageMotion() {
-  var animatedItems = document.querySelectorAll(".hero-section, table tr");
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-      }
-    });
-  }, { threshold: 0.08 });
-
-  animatedItems.forEach(function (item) {
-    item.classList.add("fade-reveal");
-    observer.observe(item);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  var savedLang = localStorage.getItem("site_lang");
-  if (savedLang && window.__i18n[savedLang]) {
-    applyLanguage(savedLang);
-  } else {
-    detectLangByIp().then(applyLanguage);
-  }
-  var enBtn = document.getElementById("lang-en");
-  var zhBtn = document.getElementById("lang-zh");
-  var frBtn = document.getElementById("lang-fr");
-  if (enBtn) enBtn.addEventListener("click", function () { applyLanguage("en"); });
-  if (zhBtn) zhBtn.addEventListener("click", function () { applyLanguage("zh"); });
-  if (frBtn) frBtn.addEventListener("click", function () { applyLanguage("fr"); });
-
-  activatePageMotion();
-  hydrateGitHubStars();
-  updateCommandClock();
-  setInterval(updateCommandClock, 1000);
-});
-</script>
-
-
-
-<body>
+<body id="top">
   <div class="tech-grid-overlay"></div>
   <table style="width:100%;max-width:1080px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
-        <section class="command-bar">
-          <div class="command-left">
-            <span class="system-pill"><span class="system-dot"></span><span id="chip-system">System online</span></span>
-            <span class="chip" id="chip-rtv">Real-time Vision</span>
-            <span class="chip" id="chip-edge">Edge Vision</span>
-            <span class="chip" id="chip-safety">Safety AI</span>
-          </div>
-          <div class="command-right">
-            <span class="label" id="label-clock">Lab clock</span>
-            <span id="command-clock">--:--:--</span>
-            <div class="lang-switch">
-              <button type="button" id="lang-en" class="lang-btn active">EN</button>
-              <button type="button" id="lang-zh" class="lang-btn">中文</button>
-              <button type="button" id="lang-fr" class="lang-btn">FR</button>
+        <header class="site-header">
+          <a class="site-brand" href="#top" aria-label="Xi Shen home">
+            <span class="brand-mark">XS</span>
+            <span class="brand-wordmark">Xi Shen</span>
+          </a>
+          <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#news"><span id="nav-news-label">News</span></a>
+            <a href="#awards"><span id="nav-awards-label">Awards</span></a>
+            <a href="#research"><span id="nav-research-label">Research</span></a>
+            <a href="#misc"><span id="nav-misc-label">About</span></a>
+          </nav>
+          <div class="header-actions">
+            <div class="lang-switch" aria-label="Language">
+              <button type="button" id="lang-en" class="lang-btn active" aria-pressed="true">EN</button>
+              <button type="button" id="lang-zh" class="lang-btn" aria-pressed="false">中文</button>
+              <button type="button" id="lang-fr" class="lang-btn" aria-pressed="false">FR</button>
             </div>
           </div>
-        </section>
+        </header>
 
         <section class="hero-section">
+          <span class="hero-scan-line" aria-hidden="true"></span>
           <div class="hero-text">
             <p class="hero-kicker" id="hero-kicker-text">Reliable Vision AI for the Real World</p>
-            <h1><name>Xi Shen</name></h1>
-            <p class="hero-contact"><span id="email-label">Email:</span> <i><u>shenxiluc at gmail dot com</u></i></p>
+            <h1>Xi Shen</h1>
+            <p class="hero-role" id="hero-role-text">Co-founder &amp; Chief Scientist · <a href="https://www.intellindust.com/">Intellindust</a> · Shenzhen, China</p>
+            <div class="expertise-row" aria-label="Research focus">
+              <span class="chip" id="chip-rtv">Real-time Vision</span>
+              <span class="chip" id="chip-edge">Edge Vision</span>
+              <span class="chip" id="chip-safety">Safety AI</span>
+            </div>
+            <p class="hero-contact"><span id="email-label">Email:</span> <a href="mailto:shenxiluc@gmail.com">shenxiluc at gmail dot com</a></p>
             <p id="bio-1">
-              I am the Co-founder and Chief Scientist at <a href="https://www.intellindust.com/">Intellindust</a> (Shenzhen, China). Our team
-              (<a href="https://intellindust-ai-lab.github.io/">Intellindust AI Lab</a>) builds reliable and efficient computer vision
+              At <a href="https://intellindust-ai-lab.github.io/">Intellindust AI Lab</a>, our team builds reliable and efficient computer vision
               systems for real-time applications on edge devices with limited NPU compute.
             </p>
             <p id="bio-2">
@@ -388,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p id="bio-3">
               If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.
             </p>
-            <p class="last-update" id="last-update-text">(Last update: 2026-06-18)</p>
+            <p class="last-update" id="last-update-text">(Last update: 2026-07-10)</p>
             <div class="now-building">
               <p class="now-title" id="now-title-text">Now Building</p>
               <p class="now-body" id="now-body-text">Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge cv models.</p>
@@ -396,22 +79,21 @@ document.addEventListener("DOMContentLoaded", function () {
             <div id="circles_container">
               <a href='http://github.com/XiSHEN0220'><img class="iconImg" src="images/github.png" alt="Github">GitHub</a>
               <a href='Xi_Shen_CV.pdf'><img class="iconImg" src="images/cv.png" alt="CV">CV</a>
-              <a href='https://scholar.google.com/citations?user=nKSXus4AAAAJ&hl=en'><img class="iconImg" src="images/googleScholar.png" alt="Google Scholar">Google Scholar</a>
-              <a href='https://intellindust-ai-lab.github.io/'><img class="iconImg" src="images/ai_lab_logo.png?v=20260307b" alt="Intellindust AI Lab">Intellindust AI Lab</a>
+              <a href='https://scholar.google.com/citations?user=nKSXus4AAAAJ&amp;hl=en'><img class="iconImg" src="images/googleScholar.png" alt="Google Scholar">Google Scholar</a>
+              <a href='https://intellindust-ai-lab.github.io/'><img class="iconImg" src="images/web/ai_lab_logo.webp?v=20260710a" alt="Intellindust AI Lab">Intellindust AI Lab</a>
             </div>
           </div>
           <div class="hero-photo-wrap">
             <a href="images/xishen_ai_sr.png?v=20260307b">
-              <img alt="profile photo" src="images/xishen_ai_sr.png?v=20260307b" class="hoverZoomLink hero-photo">
+              <img alt="Portrait of Xi Shen" src="images/xishen_ai_sr.png?v=20260307b" class="hoverZoomLink hero-photo" width="600" height="600" fetchpriority="high" decoding="async">
             </a>
           </div>
         </section>
 
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <table id="news" class="content-section section-panel news-section" data-nav-section><tbody>
   <tr><td style="padding:20px;width:100%;vertical-align:middle">
-              <heading id="heading-news">📰 News</heading>
-  <hr/>
-    
+              <h2 class="section-heading"><span id="heading-news">News</span></h2>
+
         <ul class="news-list" style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
         <li class="hot-news">
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">18 / 06 / 2026</b>&emsp;
@@ -437,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">26 / 11 / 2025</b>&emsp;
            <a href="https://pokerman8.github.io/SKEL-CF/">SKEL-CF</a> is now available on arXiv.
         </li>
-  
+
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">20 / 11 / 2025</b>&emsp;
            <a href="https://ocean146.github.io/SimROD2025/">SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements</a> is accepted by AAAI 2026.
@@ -447,24 +129,25 @@ document.addEventListener("DOMContentLoaded", function () {
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">20 / 09 / 2025</b>&emsp;
            <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">Explicit visual prompting for universal foreground segmentations</a> is accepted by TPAMI.
         </li>
-        
+
+        </ul>
+        <div id="more">
+        <ul class="news-list news-list-more">
 
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">20 / 09 / 2025</b>&emsp;
            <a href="https://intellindust-ai-lab.github.io/projects/DEIMv2/">"[DEIMv2] Real-Time Object Detection Meets DINOv3"</a> is now available on arXiv.
         </li>
-          
+
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">01 / 07 / 2025</b>&emsp;
            We took <a href="https://intellindust-ai-lab.github.io/#:~:text=Track%201%20Joint-,Denoising,-and%20Demosaicing%20challenge">2nd place in the NTIRE Joint Denoising and Demosaicing Challenge</a>, <a href="https://intellindust-ai-lab.github.io/#:~:text=Ball%20Action%20Spotting-,challenge,-CVsports%20Workshop%2C%20CVPR">2nd place in the SoccerNet Ball Action Spotting Challenge</a>, and received <a href="https://intellindust-ai-lab.github.io/#:~:text=Honorable%20Mention%20in-,Foundational,-Few%2DShot%20Object">an honorable mention in the CVPR 2025 Foundation Few-shot Object Detection Challenge</a>.
         </li>
-        
+
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">27 / 02 / 2025</b>&emsp;
            <a href="https://www.shihuahuang.cn/DEIM/">"DEIM: DETR with Improved Matching for Fast Convergence"</a> is accepted by CVPR 2025.
         </li>
-        <span id="dots"> </span>
-        <span id="more">
         <li>
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">03 / 10 / 2024</b>&emsp;
            <a href="https://www.nature.com/articles/s41565-024-01753-8">"Designing nanotheranostics with machine learning"</a> is accepted by Nature Nanotechnology 2024.
@@ -505,52 +188,51 @@ document.addEventListener("DOMContentLoaded", function () {
           <b style="background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);">15 / 07 / 2020</b>&emsp;
           Our paper "<a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/"> RANSAC-Flow: generic two-stage image alignment</a>" is accepted to <a href="https://eccv2020.eu/">ECCV 2020</a>.
         </li>
-        </span>
-        <div style="text-align:center">
-          <button class="button-2" role="button" onclick="LoadMore()" id="myBtn">Show more</button>
-        </div>
         </ul>
-  </tbody></table>
+        </div>
+        <div class="news-actions">
+          <button class="button-2" type="button" onclick="LoadMore()" id="myBtn" aria-expanded="false" aria-controls="more">Show more</button>
+        </div>
+  </td></tr></tbody></table>
 
 
-<table style="width:100%; border:0; border-spacing:0; border-collapse:separate; margin:0 auto;">
+<table id="awards" class="content-section section-panel awards-section" data-nav-section>
   <tbody>
     <tr>
       <td style="padding:20px; width:100%; vertical-align:middle;">
-        <heading id="heading-awards" style="font-size:1.5em; font-weight:600;">🏆 Awards & Honors</heading>
-        <hr style="margin:8px 0 16px 0; border:0; border-top:2px solid #ddd;"/>
+        <h2 class="section-heading"><span id="heading-awards">Awards &amp; Honors</span></h2>
 
-        <ul style="list-style:none; padding-left:0; line-height:1.6; font-size:1em;">
+        <ul class="awards-list">
           
           <!-- Competition Awards -->
           <li style="margin-bottom:12px;">
-            <b>🥇 1st Place</b> — Open-set Recognition Challenge,<br/>
-            <a href="https://www.ood-cv.org/challenge.html">Out-of-Distribution Generalization in Computer Vision Workshop, ECCV 2024</a><br/>
+            <b>🥇 1st Place</b> — Open-set Recognition Challenge,<br>
+            <a href="https://www.ood-cv.org/challenge.html">Out-of-Distribution Generalization in Computer Vision Workshop, ECCV 2024</a><br>
             <small>(Based on our CVPR work <a href="https://yutingli0606.github.io/SURE/">SURE</a>.)</small>
           </li>
 
           <li style="margin-bottom:12px;">
-            <b>🥇 1st Place</b> — Low-light Object Detection,<br/>
+            <b>🥇 1st Place</b> — Low-light Object Detection,<br>
             <a href="https://pbdl-ws.github.io/pbdl2024/">4th Physics-Based Vision Meets Deep Learning Workshop, CVPR 2024</a>
           </li>
 
           <li style="margin-bottom:12px;">
-            <b>🥉 3rd Place</b> — Low-light Instance Segmentation,<br/>
+            <b>🥉 3rd Place</b> — Low-light Instance Segmentation,<br>
             <a href="https://pbdl-ws.github.io/pbdl2024/">4th Physics-Based Vision Meets Deep Learning Workshop, CVPR 2024</a>
           </li>
 
           <li style="margin-bottom:12px;">
-            <b>🥈 2nd Place</b> — Joint Denoising and Demosaicing,<br/>
+            <b>🥈 2nd Place</b> — Joint Denoising and Demosaicing,<br>
             <a href="https://cvlai.net/ntire/2025/">NTIRE Workshop, CVPR 2025</a>
           </li>
 
           <li style="margin-bottom:12px;">
-            <b>🥈 2nd Place</b> — SoccerNet Ball Action Spotting,<br/>
+            <b>🥈 2nd Place</b> — SoccerNet Ball Action Spotting,<br>
             <a href="https://www.soccer-net.org/challenges/2025">SoccerNet Challenges, CVPR 2025</a>
           </li>
 
           <li style="margin-bottom:16px;">
-            <b>🎖️ Honorable Mention</b> — Foundation Few-shot Object Detection,<br/>
+            <b>🎖️ Honorable Mention</b> — Foundation Few-shot Object Detection,<br>
             <a href="https://www.soccer-net.org/challenges/2025">Visual Perception via Learning in an Open World, CVPR 2025</a>
           </li>
 
@@ -565,36 +247,61 @@ document.addEventListener("DOMContentLoaded", function () {
   </tbody>
 </table>
 
-        <table id="research-section" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="research" class="content-section research-header" data-nav-section><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading id="heading-research">💡 Research</heading>
-              <hr/>
-              <p>
-                
-                <sup>*</sup> indicates equal contribution. </br>
-
-                <sup>+</sup> indicates corresponding author. </br>
-
-                Representative papers are <span class="highlight">highlighted</span>.
-              </p>
+              <h2 class="section-heading"><span id="heading-research">Research</span></h2>
+              <p class="research-note" id="research-note">* Equal contribution · + Corresponding author · Featured work is highlighted.</p>
             </td>
           </tr>
         </tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <table id="publication-list" aria-label="Publications"><tbody>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sureplus.png' width="220" >
+                <img src='images/web/skel_cf.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
+              </div>
+
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://pokerman8.github.io/SKEL-CF/">
+                <span class="paper-title">SKEL-CF: Coarse-to-Fine Biomechanical Skeleton and Surface Mesh Recovery</span>
+              </a>
+              <br>
+
+              <a href="https://dali936.github.io/">Da Li<sup>*</sup></a>,
+              <a href="https://pokerman8.github.io/">Jiping Jin<sup>*</sup></a>,
+              <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
+              Wei Liu,
+              <a href="https://vinthony.github.io/academic/">Xiaodong Cun</a>,
+              Kai Chen,
+              Rui Fan,
+              Jiangang Kong,
+              <strong>Xi Shen<sup>+</sup></strong>,
+              <br>
+              <em>ECCV</em>, 2026
+              <br>
+              <a href="https://pokerman8.github.io/SKEL-CF/">[Project page]</a> &nbsp;
+              <a href="https://arxiv.org/abs/2511.20157">[PDF]</a> &nbsp;
+              <a href="https://github.com/Intellindust-AI-Lab/SKEL-CF">[Code (GitHub)]</a> &nbsp;
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SKEL-CF" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="65"><span class="star-label">Star</span><span class="star-value">65</span></a>
+
+            </td>
+            </tr>
+
+            <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div style="display: flex; justify-content: center;">
+                <img src='images/web/sureplus.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">
-                <papertitle>[SURE+] From Misclassifications to Outliers: Joint Reliability Assessment for Classification</papertitle>
+                <span class="paper-title">[SURE+] From Misclassifications to Outliers: Joint Reliability Assessment for Classification</span>
               </a>
-              </br>
+              <br>
 
               Yang Li,
               Youyang Sha,
@@ -603,54 +310,54 @@ document.addEventListener("DOMContentLoaded", function () {
               <strong>Xi Shen</strong>,
               <a href="http://hushell.github.io">Shell Xu Hu<sup>+</sup></a>,
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu<sup>+</sup></a>
-              </br>
+              <br>
               <em>arXiv</em>, 2026
-              </br>
+              <br>
               <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2603.03903">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/SUREPlus">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SUREPlus" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SUREPlus" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="9"><span class="star-label">Star</span><span class="star-value">9</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/hed.png' width="220" >
+                <img src='images/web/hed.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://intellindust-ai-lab.github.io/projects/FT-FSOD/">
-                <papertitle>A Closer Look at Cross-Domain Few-Shot Object Detection: Fine-Tuning Matters and Parallel Decoder Helps</papertitle>
+                <span class="paper-title">A Closer Look at Cross-Domain Few-Shot Object Detection: Fine-Tuning Matters and Parallel Decoder Helps</span>
               </a>
-              </br>
+              <br>
 
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
               Youyang Sha,
               <a href="https://capsule2077.github.io/">Longfei Liu</a>,
               <strong>Xi Shen<sup>+</sup></strong>,
               <a href="https://walker1126.github.io/">Di Yang<sup>+</sup></a>
-              </br>
+              <br>
               <em>CVPR</em>, 2026
-              </br>
+              <br>
               <a href="https://intellindust-ai-lab.github.io/projects/FT-FSOD/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2603.28182">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/FT-FSOD">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/FT-FSOD" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/FT-FSOD" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="42"><span class="star-label">Star</span><span class="star-value">42</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/movie.png' width="220" >
+                <img src='images/web/movie.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://walker1126.github.io/MoVie-project/">
-                <papertitle>MoVie: Broaden Your Views with Human Motion for Action Detection</papertitle>
+                <span class="paper-title">MoVie: Broaden Your Views with Human Motion for Action Detection</span>
               </a>
-              </br>
+              <br>
 
               Di Yang,
               Mahmoud Ali,
@@ -659,26 +366,26 @@ document.addEventListener("DOMContentLoaded", function () {
               Quan Kong,
               Gianpiero Francesca,
               Francois Bremond<sup>+</sup>
-              </br>
+              <br>
               <em>CVPR</em>, 2026
-              </br>
+              <br>
               <a href="https://walker1126.github.io/MoVie-project/">[Project page]</a> &nbsp;
               <a href="https://openaccess.thecvf.com/content/CVPR2026/papers/Yang_MoVie_Broaden_Your_Views_with_Human_Motion_for_Action_Detection_CVPR_2026_paper.pdf">[PDF]</a> &nbsp;
               <a href="https://walker1126.github.io/MoVie-project/">[Code]</a>
             </td>
             </tr>
 
-            <tr>
+            <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/edgecrafter.png' width="220" >
+                <img src='images/web/edgecrafter.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://intellindust-ai-lab.github.io/projects/EdgeCrafter/">
-                <papertitle>EdgeCrafter: Compact ViTs for Edge Dense Prediction via Task-Specialized Distillation</papertitle>
+                <span class="paper-title">EdgeCrafter: Compact ViTs for Edge Dense Prediction via Task-Specialized Distillation</span>
               </a>
-              </br>
+              <br>
 
               <a href="https://capsule2077.github.io/">Longfei Liu</a>,
               Yongjie Hou,
@@ -690,28 +397,28 @@ document.addEventListener("DOMContentLoaded", function () {
               Peizhe Ru,
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu<sup>+</sup></a>,
               <strong>Xi Shen<sup>+</sup></strong>
-              </br>
+              <br>
               <em>arXiv</em>, 2026
-              </br>
+              <br>
               <a href="https://intellindust-ai-lab.github.io/projects/EdgeCrafter/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2603.18739">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/EdgeCrafter">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/EdgeCrafter" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/EdgeCrafter" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="274"><span class="star-label">Star</span><span class="star-value">274</span></a>
             </td>
             </tr>
-            
+
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/fsod_vfm.png' width="220" >
+                <img src='images/web/fsod_vfm.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://intellindust-ai-lab.github.io/projects/FSOD-VFM/">
-                <papertitle>FSOD-VFM: Few-Shot Object Detection with Vision Foundation Models and Graph Diffusion</papertitle>
+                <span class="paper-title">FSOD-VFM: Few-Shot Object Detection with Vision Foundation Models and Graph Diffusion</span>
               </a>
-              </br>
+              <br>
               
               <a href="https://fcbfcb1998.github.io/">Chen-Bin Feng<sup>*</sup></a>,
               Youyang Sha<sup>*</sup>,
@@ -720,13 +427,13 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://www.fst.um.edu.mo/personal/cmvong/">Chi Man Vong<sup>+</sup></a>,
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu<sup>+</sup></a>,
               <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
+              <br>
               <em>ICLR</em>, 2026
-              </br>
+              <br>
               <a href="https://intellindust-ai-lab.github.io/projects/FSOD-VFM/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2602.03137">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/FSOD-VFM">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/FSOD-VFM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/FSOD-VFM" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="91"><span class="star-label">Star</span><span class="star-value">91</span></a>
 
             </td>
             </tr>
@@ -734,48 +441,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/skel_cf.gif' width="220" >
-              </div>
-              
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://pokerman8.github.io/SKEL-CF/">
-                <papertitle>SKEL-CF: Coarse-to-Fine Biomechanical Skeleton and Surface Mesh Recovery</papertitle>
-              </a>
-              </br>
-              
-              <a href="https://dali936.github.io/">Da Li<sup>*</sup></a>,
-              <a href="https://pokerman8.github.io/">Jiping Jin<sup>*</sup></a>,
-              <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
-              Wei Liu, 
-              <a href="https://vinthony.github.io/academic/">Xiaodong Cun</a>,
-              Kai Chen,
-              Rui Fan,
-              Jiangang Kong,
-              <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
-              <em>ECCV</em>, 2026
-              </br>
-              <a href="https://pokerman8.github.io/SKEL-CF/">[Project page]</a> &nbsp;
-              <a href="https://arxiv.org/abs/2511.20157">[PDF]</a> &nbsp;
-              <a href="https://github.com/Intellindust-AI-Lab/SKEL-CF">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SKEL-CF" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
-
-            </td>
-            </tr>
-
-            <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div style="display: flex; justify-content: center;">
-                <img src='images/simrod.png' width="220" >
+                <img src='images/web/simrod.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://ocean146.github.io/SimROD2025/">
-                <papertitle>SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements</papertitle>
+                <span class="paper-title">SimROD: A Simple Baseline for Raw Object Detection with Global and Local Enhancements</span>
               </a>
-              </br>
+              <br>
               
               <a href="https://ocean146.github.io/">Haiyang Xie</a>,
               <strong>Xi Shen</strong>,
@@ -784,13 +458,13 @@ document.addEventListener("DOMContentLoaded", function () {
               
               <a href="https://wangzwhu.github.io/home/">Zheng Wang</a>
               
-              </br>
+              <br>
               <em>AAAI</em>, 2026
-              </br>
+              <br>
               <a href="https://ocean146.github.io/SimROD2025/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2503.07101">[PDF]</a> &nbsp;
               <a href="https://github.com/ocean146/SimROD">[Code (GitHub)]</a>
-              <a class="github-button" translate="no" lang="en" href="https://github.com/ocean146/SimROD" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/ocean146/SimROD" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="30"><span class="star-label">Star</span><span class="star-value">30</span></a>
               
 
             </td>
@@ -799,116 +473,116 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/evp2.png' width="220" >
+                <img src='images/web/evp2.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">
-                <papertitle>Explicit Visual Prompting for Universal Foreground Segmentations</papertitle>
+                <span class="paper-title">Explicit Visual Prompting for Universal Foreground Segmentations</span>
               </a>
-              </br>
+              <br>
               
               Weihuang Liu,
               <strong>Xi Shen</strong>,
               <a href="https://www.cis.um.edu.mo/~cmpun/">Chi-Man Pun<sup>+</sup></a>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun<sup>+</sup></a>
               
-              </br>
+              <br>
               <em>TPAMI</em>, 2025
-              </br>
+              <br>
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2305.18476">[PDF]</a> &nbsp;
               <a href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt">[Code (GitHub)]</a>
-              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="230"><span class="star-label">Star</span><span class="star-value">230</span></a>
               
 
             </td>
             </tr>
 
-            <tr bgcolor="#ffffd0">
+            <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/deimv2.png' width="220" >
+                <img src='images/web/deimv2.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
 
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://intellindust-ai-lab.github.io/projects/DEIMv2/">
-                <papertitle>Real-Time Object Detection Meets DINOv3</papertitle>
+                <span class="paper-title">Real-Time Object Detection Meets DINOv3</span>
               </a>
 
-              </br>
+              <br>
 
               <a href="https://www.shihuahuang.cn/">Shihua Huang<sup>*</sup></a>,
               Yongjie Hou<sup>*</sup>,
               <a href="https://capsule2077.github.io/">Longfei Liu<sup>*</sup></a>,
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
               <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
+              <br>
               <em>arXiv</em>, 2025
-              </br>
+              <br>
               <a href="https://intellindust-ai-lab.github.io/projects/DEIMv2/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2509.20787">[PDF]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/DEIMv2">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/DEIMv2" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/DEIMv2" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="1910"><span class="star-label">Star</span><span class="star-value">1910</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/deim.png' width="220" >
+                <img src='images/web/deim.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
 
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.shihuahuang.cn/DEIM/">
-                <papertitle>DEIM: DETR with Improved Matching for Fast Convergence</papertitle>
+                <span class="paper-title">DEIM: DETR with Improved Matching for Fast Convergence</span>
               </a>
 
-              </br>
+              <br>
 
               <a href="https://www.shihuahuang.cn/">Shihua Huang</a>,
-              <a href="https://scholar.google.com/citations?user=tIFWBcQAAAAJ&hl=en">Zhihao Lu</a>,
+              <a href="https://scholar.google.com/citations?user=tIFWBcQAAAAJ&amp;hl=en">Zhihao Lu</a>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun</a>,
                Yongjun Yu,
                Xiao Zhou,
               <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
+              <br>
               <em>CVPR</em>, 2025
-              </br>
+              <br>
               <a href="https://www.shihuahuang.cn/DEIM/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2412.04234">[PDF]</a> &nbsp;
               <a href="https://www.shihuahuang.cn/DEIM/resrc/DEIM-Slides.pdf">[Slides]</a> &nbsp;
               <a href="https://github.com/ShihuaHuang95/DEIM">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/ShihuaHuang95/DEIM" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/ShihuaHuang95/DEIM" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="1573"><span class="star-label">Star</span><span class="star-value">1573</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/ml_nano.png' width="220" >
+                <img src='images/web/ml_nano.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
 
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.nature.com/articles/s41565-024-01753-8">
-                <papertitle>Designing Nanotheranostics with Machine Learning</papertitle>
+                <span class="paper-title">Designing Nanotheranostics with Machine Learning</span>
               </a>
 
-              </br>
+              <br>
 
-              <a href="https://scholar.google.com/citations?user=ml35-BQAAAAJ&hl=en">Lang Rao</a>,
+              <a href="https://scholar.google.com/citations?user=ml35-BQAAAAJ&amp;hl=en">Lang Rao</a>,
               <a href="https://yyuanad.github.io/">Yuan Yuan</a>,
               <strong>Xi Shen</strong>,
               Guocan, Yu,
               <a href="https://cde.nus.edu.sg/bme/staff/dr-chen-xiaoyuan-shawn/">Xiaoyuan Chen</a>,
               
-              </br>
+              <br>
               <em>Nature Nanotechnology</em>, 2024
-              </br>
+              <br>
               <a href="https://www.nature.com/articles/s41565-024-01753-8">[PDF]</a> &nbsp;
             </td>
             </tr>
@@ -917,44 +591,44 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/htr_vt.jpeg' width="220" >
+                <img src='images/web/htr_vt.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
 
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://yutingli0606.github.io/HTR-VT/">
-                <papertitle>HTR-VT: Handwritten Text Recognition with Vision Transformer</papertitle>
+                <span class="paper-title">HTR-VT: Handwritten Text Recognition with Vision Transformer</span>
               </a>
 
-              </br>
+              <br>
 
               <a href="https://yutingli0606.github.io/">Yuting Li</a>,
               <a href="https://dexiong.me/">Dexiong Chen</a><sup>+</sup>,
               Tinglong Tang,
               <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
+              <br>
               <em>Pattern Recognition</em>, 2024
-              </br>
+              <br>
               <a href="https://yutingli0606.github.io/HTR-VT/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2409.08573">[PDF]</a> &nbsp;
               <a href="https://github.com/YutingLi0606/HTR-VT">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/HTR-VT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/HTR-VT" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="134"><span class="star-label">Star</span><span class="star-value">134</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/dattt_teaser.png' width="220" >
+                <img src='images/web/dattt_teaser.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://nifangbaage.github.io/DATTT/">
-                <papertitle>Depth-aware Test-Time Training for Zero-shot Video Object Segmentation</papertitle>
+                <span class="paper-title">Depth-aware Test-Time Training for Zero-shot Video Object Segmentation</span>
               </a>
               
-              </br>
+              <br>
               
               Weihuang Liu,
               <strong>Xi Shen</strong>,
@@ -963,101 +637,101 @@ document.addEventListener("DOMContentLoaded", function () {
               Bo Liu,
               <a href="https://www.cis.um.edu.mo/~cmpun/">Chi-Man Pun<sup>+</sup></a>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun<sup>+</sup></a>
-              </br>
+              <br>
               <em>CVPR</em>, 2024
-              </br>
+              <br>
               <a href="https://nifangbaage.github.io/DATTT/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2403.04258">[PDF]</a> &nbsp;
-              <a href="hhttps://github.com/NiFangBaAGe/DATTT">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/DATTT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a href="https://github.com/NiFangBaAGe/DATTT">[Code (GitHub)]</a> &nbsp;
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/DATTT" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="29"><span class="star-label">Star</span><span class="star-value">29</span></a>
             </td>
             </tr>
 
-            <tr bgcolor="#ffffd0">
+            <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sure.jpeg' width="220" >
+                <img src='images/web/sure.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://yutingli0606.github.io/SURE/">
-                <papertitle>SURE: SUrvey REcipes for building reliable and robust deep networks</papertitle>
+                <span class="paper-title">SURE: SUrvey REcipes for building reliable and robust deep networks</span>
               </a>
               
-              </br>
+              <br>
               
               <a href="https://yutingli0606.github.io/">Yuting Li</a>,
               <a href="https://github.com/yingyichen-cyy/">Yingyi Chen</a>,
               <a href="https://xuanlong-yu.github.io/">Xuanlong Yu</a>,
               <a href="https://dexiong.me/">Dexiong Chen</a><sup>+</sup>,
               <strong>Xi Shen<sup>+</sup></strong>,
-              </br>
+              <br>
               <em>CVPR</em>, 2024
-              </br>
+              <br>
               <a href="https://www.ood-cv.org/challenge.html">
               <span style="color: firebrick;">
               SURE-OOD is the Winner of SSB-OSR challenge, ECCV 2024 
               </span>
               </a>
-              </br>
+              <br>
               <a href="https://yutingli0606.github.io/SURE/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2403.00543.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/YutingLi0606/SURE">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/SURE" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
-            </br>
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YutingLi0606/SURE" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="76"><span class="star-label">Star</span><span class="star-value">76</span></a>
+            <br>
               <a href="https://github.com/LIYangggggg/SSB-OSR/blob/main/docs/SURE_OOD.pdf">[Tech. Report SURE-OOD]</a> &nbsp;
               <a href="https://github.com/Intellindust-AI-Lab/SSB-OSR">[Code SURE-OOD (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SSB-OSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>
-               
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Intellindust-AI-Lab/SSB-OSR" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="29"><span class="star-label">Star</span><span class="star-value">29</span></a>
+
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/2022_tokencut_video.gif' width="220" >
+                <img src='images/web/2022_tokencut_video.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.m-psi.fr/Papers/TokenCut2022/">
-                <papertitle>TokenCut: Segmenting Objects in Images and Videos with Self-supervised Transformer and Normalized Cut</papertitle>
+                <span class="paper-title">TokenCut: Segmenting Objects in Images and Videos with Self-supervised Transformer and Normalized Cut</span>
               </a>
               
-              </br>
+              <br>
               
               <a href="https://yangtaowang95.github.io/">Yangtao Wang</a>,
               <strong>Xi Shen<sup>+</sup></strong>,
               <a href="https://yyuanad.github.io/">Yuan Yuan</a>,
               <a href="https://dulucas.github.io/">Yuming Du</a>,
-              <a href="https://scholar.google.com/citations?user=ym_t6QYAAAAJ&hl=zh-CN">Maomao Li</a>,
+              <a href="https://scholar.google.com/citations?user=ym_t6QYAAAAJ&amp;hl=zh-CN">Maomao Li</a>,
               <a href="http://hushell.github.io">Xu Hu</a>, 
               <a href="http://crowley-coutaz.fr/jlc/jlc.html">James Crowley</a>,
               <a href="https://research.vaufreydaz.org/">Dominique Vaufreydaz</a>
-              </br>
+              <br>
               <em>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</em>, 2023
-              </br>
+              <br>
               <a href="https://www.m-psi.fr/Papers/TokenCut2022/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2209.00383">[PDF]</a> &nbsp;
               <a href="https://github.com/YangtaoWANG95/TokenCut_video">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut_video" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut_video" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="64"><span class="star-label">Star</span><span class="star-value">64</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/livelyspeaker.gif' width="220" >
+                <img src='images/web/livelyspeaker.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://github.com/zyhbili/LivelySpeaker">
-                <papertitle>LivelySpeaker: Towards Semantic-aware Co-speech Gesture Generation</papertitle>
+                <span class="paper-title">LivelySpeaker: Towards Semantic-aware Co-speech Gesture Generation</span>
               </a>
               
-              </br>
+              <br>
               
               <a>Yihao Zhi<sup>*</sup></a>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun<sup>*</sup></a>,
@@ -1066,75 +740,75 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://guo-w.github.io//">Wen Guo</a>,
               <a>Shaoli Huang</a>,
               <a href="https://svip-lab.github.io/team.html">Shenghua Gao</a>
-              </br>
+              <br>
               <em>ICCV</em>, 2023
-              </br>
+              <br>
               <a href="https://github.com/zyhbili/LivelySpeaker">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2309.09294">[PDF]</a> &nbsp;
               <a href="https://github.com/zyhbili/LivelySpeaker">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/zyhbili/LivelySpeaker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/zyhbili/LivelySpeaker" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="87"><span class="star-label">Star</span><span class="star-value">87</span></a>
             </td>
             </tr>
 
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/vpt.png' width="220" >
+                <img src='images/web/vpt.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">
-                <papertitle>Explicit Visual Prompting for Low-Level Structure Segmentations</papertitle>
+                <span class="paper-title">Explicit Visual Prompting for Low-Level Structure Segmentations</span>
               </a>
-              </br>
+              <br>
               
               Weihuang Liu,
               <strong>Xi Shen</strong>,
               <a href="https://www.cis.um.edu.mo/~cmpun/">Chi-Man Pun<sup>+</sup></a>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun<sup>+</sup></a>
               
-              </br>
+              <br>
               <em>CVPR</em>, 2023
-              </br>
+              <br>
               <a href="https://nifangbaage.github.io/Explicit-Visual-Prompt/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2303.10883.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt">[Code (GitHub)]</a>
-              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/NiFangBaAGe/Explicit-Visual-Prompt" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="230"><span class="star-label">Star</span><span class="star-value">230</span></a>
               
 
             </td>
             </tr>
-            <tr bgcolor="#ffffd0">
+            <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/t2m.gif' width="220" >
+                <img src='images/web/t2m.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://mael-zys.github.io/T2M-GPT/">
-                <papertitle>T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations</papertitle>
+                <span class="paper-title">T2M-GPT: Generating Human Motion from Textual Descriptions with Discrete Representations</span>
               </a>
-              </br>
+              <br>
               
               Jianrong Zhang<sup>*</sup>,
               Yangsong Zhang<sup>*</sup>, 
               
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun</a>,
-              <a href="https://scholar.google.com/citations?user=o31BPFsAAAAJ&hl=en">Shaoli Huang</a>,
+              <a href="https://scholar.google.com/citations?user=o31BPFsAAAAJ&amp;hl=en">Shaoli Huang</a>,
               <a href="https://yzhang2016.github.io/">Yong Zhang</a>,
               Hongwei Zhao,
               Hongtao Lu,
               <strong>Xi Shen<sup>+</sup></strong>
-              </br>
+              <br>
               <em>CVPR</em>, 2023
-              </br>
+              <br>
               <a href="https://mael-zys.github.io/T2M-GPT/">[Project page]</a> &nbsp;
-              <a href="hhttps://arxiv.org/abs/2301.06052">[PDF]</a> &nbsp;
+              <a href="https://arxiv.org/abs/2301.06052">[PDF]</a> &nbsp;
               <a href="https://github.com/Mael-zys/T2M-GPT">[Code (GitHub)]</a> &nbsp;
               <a href="https://colab.research.google.com/drive/1Vy69w2q2d-Hg19F-KibqG0FRdpSj3L4O?usp=sharing">[Online demo (Colab)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Mael-zys/T2M-GPT" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Mael-zys/T2M-GPT" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="768"><span class="star-label">Star</span><span class="star-value">768</span></a>
               
               
 
@@ -1143,15 +817,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sadtalker.gif' width="220" >
+                <img src='images/web/sadtalker.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://sadtalker.github.io/">
-                <papertitle>SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</papertitle>
+                <span class="paper-title">SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation</span>
               </a>
-              </br>
+              <br>
               
               Wenxuan Zhang<sup>*</sup>,
               <a href="https://vinthony.github.io/academic/">Xiaodong Cun</a><sup>*</sup>,
@@ -1162,34 +836,34 @@ document.addEventListener("DOMContentLoaded", function () {
               Guo Yu,
               Ying Shan,
               Fei Wang
-              </br>
+              <br>
               <em>CVPR</em>, 2023
-              </br>
+              <br>
               <a href="https://medium.com/voxel51/cvpr-2023-survival-guide-504e965e1f8b">
               <span style="color: firebrick;">
               Top 10 you won't miss papers of CVPR 2023 (Voxel51). 
               </span>
               </a>
-              </br>
+              <br>
               <a href="https://sadtalker.github.io/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2211.12194.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/Winfredy/SadTalker">[Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Winfredy/SadTalker" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Winfredy/SadTalker" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="13944"><span class="star-label">Star</span><span class="star-value">13944</span></a>
 
             </td>
             </tr>
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/simple.png' width="220" >
+                <img src='images/web/simple.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://github.com/dulucas/siMLPe">
-                <papertitle>Back to MLP: A Simple Baseline for Human Motion Prediction (siMLPe)</papertitle>
+                <span class="paper-title">Back to MLP: A Simple Baseline for Human Motion Prediction (siMLPe)</span>
               </a>
-              </br>
+              <br>
               
               <a href="https://guo-w.github.io//">Wen Guo<sup>*</sup></a>,
               <a href="https://dulucas.github.io/Homepage/">Yuming Du<sup>*</sup></a>, 
@@ -1198,13 +872,13 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="http://xavirema.eu/">Xavier Alameda-Pineda</a>,
               <a href="https://www.iri.upc.edu/people/fmoreno/">Francesc Moreno-Noguer</a>
               
-              </br>
+              <br>
               <em>WACV</em>, 2023
-              </br>
+              <br>
               <a href="https://github.com/dulucas/siMLPe">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2207.01567">[PDF]</a> &nbsp;
               <a href="https://github.com/dulucas/siMLPe">[siMLPe Code (GitHub)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/dulucas/siMLPe" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/dulucas/siMLPe" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="162"><span class="star-label">Star</span><span class="star-value">162</span></a>
               
 
             </td>
@@ -1214,46 +888,46 @@ document.addEventListener("DOMContentLoaded", function () {
             <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sortout.jpeg' width="220" >
+                <img src='images/web/sortout.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://yingyichen-cyy.github.io/CompressFeatNoisyLabels/">
-                <papertitle>Compressing Features for Learning with Noisy Labels</papertitle>
+                <span class="paper-title">Compressing Features for Learning with Noisy Labels</span>
               </a>
-              </br>
+              <br>
               
               <a href="https://github.com/yingyichen-cyy/">Yingyi Chen</a>,
               <a href="http://hushell.github.io">Xu Hu</a>, 
               <strong>Xi Shen<sup>+</sup></strong>,
               <a href="https://myweb.cuhk.edu.cn/chunrongai">Chunrong Ai</a>,
               <a href="https://www.esat.kuleuven.be/sista/members/suykens.html">Johan A.K. Suykens</a>
-              </br>
+              <br>
               <em>TNNLS</em>, 2022
-              </br>
+              <br>
               <a href="https://yingyichen-cyy.github.io/CompressFeatNoisyLabels/">[Project page]</a> &nbsp;
               <a href="https://yingyichen-cyy.github.io/CompressFeatNoisyLabels/">[PDF]</a> &nbsp;
               <a href="https://github.com/yingyichen-cyy/Nested-Co-teaching">[Code (GitHub)]</a> &nbsp;
-              <a href="https://www.youtube.com/watch?v=y9zBDioKMM0&t=5s">[Workshop Video (7 mins)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/yingyichen-cyy/Nested-Co-teaching" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a href="https://www.youtube.com/watch?v=y9zBDioKMM0&amp;t=5s">[Workshop Video (7 mins)]</a> &nbsp;
+              <a class="github-button" translate="no" lang="en" href="https://github.com/yingyichen-cyy/Nested-Co-teaching" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="51"><span class="star-label">Star</span><span class="star-value">51</span></a>
               
 
             </td>
             </tr>
             
-            <tr bgcolor="#ffffd0">
+            <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/tokencut.gif' width="220" >
+                <img src='images/web/tokencut.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://www.m-psi.fr/Papers/TokenCut2022/">
-                <papertitle>Self-Supervised Transformers for Unsupervised Object Discovery using Normalized Cut</papertitle>
+                <span class="paper-title">Self-Supervised Transformers for Unsupervised Object Discovery using Normalized Cut</span>
               </a>
-              </br>
+              <br>
               
               <a href="https://yangtaowang95.github.io/">Yangtao Wang</a>,
               <strong>Xi Shen<sup>+</sup></strong>,
@@ -1261,16 +935,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a href="https://yyuanad.github.io">Yuan Yuan</a>,
                 <a href="http://crowley-coutaz.fr/jlc/jlc.html">James Crowley</a>,
                 <a href="https://research.vaufreydaz.org/">Dominique Vaufreydaz</a>
-              </br>
+              <br>
               <em>CVPR</em>, 2022
-              </br>
+              <br>
               <a href="https://www.m-psi.fr/Papers/TokenCut2022/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/pdf/2202.11539.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/YangtaoWANG95/TokenCut">[Code (GitHub)]</a> &nbsp;
               <a href="https://colab.research.google.com/github/YangtaoWANG95/TokenCut/blob/master/inference_demo.ipynb">[Colab]</a> &nbsp;
               <a href="https://huggingface.co/spaces/akhaliq/TokenCut">[Gradio Demo]</a> &nbsp;
               <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/wangyan/tokencut">[Code (GitLab)]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/YangtaoWANG95/TokenCut" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="338"><span class="star-label">Star</span><span class="star-value">338</span></a>
               
 
             </td>
@@ -1279,15 +953,15 @@ document.addEventListener("DOMContentLoaded", function () {
           <tr>
             <td style="padding:20px;width:25%;vertical-align:center">
               <div style="display: flex; justify-content: center;">
-                <img src='images/ijcv2022.jpg' width="220">
+                <img src='images/web/ijcv2022.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/HisImgAnalysis/">
-                <papertitle>Spatially-consistent Feature Matching and Learning for Heritage Image Analysis</papertitle>
+                <span class="paper-title">Spatially-consistent Feature Matching and Learning for Heritage Image Analysis</span>
               </a>
-              </br>
+              <br>
 
               
               <strong>Xi Shen</strong>,
@@ -1295,23 +969,23 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://people.eecs.berkeley.edu/~shiry/"> Shiry Ginosar</a>,
               <a href="http://www.chartes.psl.eu/en/ilaria-pastrolin">Ilaria Pastrolin</a>,
               <a href="https://www.ademec.com/en/association/members/morgane-rousselot">Morgane Rousselot</a>,
-              <a href="https://scholar.google.com/citations?user=B2RS1M4AAAAJ&hl=en">Oumayma Bounou</a>,
+              <a href="https://scholar.google.com/citations?user=B2RS1M4AAAAJ&amp;hl=en">Oumayma Bounou</a>,
               <a href="https://imagine.enpc.fr/~monniert/">Tom Monnier</a>,
-              <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&hl=en">Spyros Gidaris</a>,
+              <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&amp;hl=en">Spyros Gidaris</a>,
               <a href="https://www.irht.cnrs.fr/fr/annuaire/bougard-francois">Fran&ccedil;ois Bougard</a>,
               <a href="https://www.rocq.inria.fr/arles/index.php/software/106-pierre-guillaume-raverdy">Pierre-Guillaume Raverdy</a>,
               <a href="http://www.chartes.psl.eu/fr/marie-francoise-limon-bonnet">Marie-Fran&ccedil;oise Limon</a>,
               <a href="http://www.chartes.psl.eu/fr/christine-benevent">Christine B&eacute;n&eacute;vent</a>,
               <a href="http://www.chartes.psl.eu/fr/marc-smith">Marc Smith</a>,
               <a href="http://www.chartes.psl.eu/fr/olivier-poncet">Olivier Poncet</a>,
-              <a href="https://scholar.google.be/citations?user=gW9pIqEAAAAJ&hl=en">K. Bender</a>,
+              <a href="https://scholar.google.be/citations?user=gW9pIqEAAAAJ&amp;hl=en">K. Bender</a>,
               <a href="https://www.unige.ch/lettres/humanites-numeriques/fr/equipe/collaborateurs/prof-beatrice-joyeux-prunel/">B&eacute;atrice Joyeux-Prunel</a>,
               <a href="https://arthistory.berkeley.edu/people/elizabeth-honig/"> Elizabeth Honig</a>,
               <a href="https://people.eecs.berkeley.edu/~efros/"> Alexei A. Efros</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>IJCV</em>, 2022
-              </br>
+              <br>
               <a href="http://imagine.enpc.fr/~shenx/HisImgAnalysis/">[Project page]</a> &nbsp;
               <a href="https://link.springer.com/article/10.1007/s11263-022-01576-x">[PDF (Springer)]</a>
               &nbsp;
@@ -1320,39 +994,39 @@ document.addEventListener("DOMContentLoaded", function () {
         </tr>
 
 
-        <tr bgcolor="#ffffd0">
+        <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/teaser_SegSwap.jpeg' width="220" >
+                <img src='images/web/teaser_SegSwap.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/SegSwap/">
-                <papertitle>Learning Co-segmentation by Segment Swapping for Retrieval and Discovery</papertitle>
+                <span class="paper-title">Learning Co-segmentation by Segment Swapping for Retrieval and Discovery</span>
               </a>
-              </br>
+              <br>
               
               <strong>Xi Shen</strong>,
               <a href="https://people.eecs.berkeley.edu/~efros/"> Alexei A. Efros</a>,
               <a href="https://ai.facebook.com/people/armand-joulin/">Armand Joulin</a>,
               <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>CVPR </em> <a href="https://image-matching-workshop.github.io/">Image Matching</a> workshop and <a href="https://sites.google.com/view/t4v-cvpr22">Transformer</a> workshop, 2022
-              </br>
+              <br>
               <a href="https://github.com/EGO4D/ego-exo4d-relation/tree/main/correspondence/SegSwap">
               <span style="color: firebrick;">
               Segswap serves as the foundational baseline for Ego-Exo4D-Relation. 
               </span>
               </a>
-              </br>
+              <br>
               
               <a href="http://imagine.enpc.fr/~shenx/SegSwap/">[Project page]</a> &nbsp;
               <a href="http://arxiv.org/abs/2110.15904">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/SegSwap">[Code]</a> &nbsp;
               <a href="https://youtu.be/9pKwNGZPDr8">[Youtube Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/SegSwap/slides.pdf">[Slides]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SegSwap" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SegSwap" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="53"><span class="star-label">Star</span><span class="star-value">53</span></a>
               
 
             </td>
@@ -1361,53 +1035,53 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/teaser_SSR.jpg' width="220" >
+                <img src='images/web/teaser_SSR.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/SSR/">
-                <papertitle>Re-ranking for image retrieval and transductive few-shot classification</papertitle>
+                <span class="paper-title">Re-ranking for image retrieval and transductive few-shot classification</span>
               </a>
-              </br>
+              <br>
               
               <strong>Xi Shen</strong>,
               <a href="https://youngxiao13.github.io/">Yang Xiao</a>,
             <a href="http://hushell.github.io/">Shell Xu Hu</a>,
             <a href="https://www.sbaiothman.com/">Othman Sbai</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>NeurIPS</em>, 2021
-              </br>
+              <br>
               <a href="http://imagine.enpc.fr/~shenx/SSR/">[Project page]</a> &nbsp;
               <a href="https://papers.nips.cc/paper/2021/file/d9fc0cdb67638d50f411432d0d41d0ba-Paper.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/SSR">[Code]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/SSR/ssr.mp4">[Video]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SSR" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/SSR" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="31"><span class="star-label">Star</span><span class="star-value">31</span></a>
             </td>
         </tr>
 
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/collation.jpeg' width="220" >
+                <img src='images/web/collation.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/">
-                <papertitle>Image Collation: Matching illustrations in manuscripts</papertitle>
+                <span class="paper-title">Image Collation: Matching illustrations in manuscripts</span>
               </a>
-              </br>
+              <br>
               
             <a href="https://github.com/Rykoua">Ryad Kaoua</a>,
             <strong>Xi Shen</strong>,
-            <a href="https://www.orient-mediterranee.com/spip.php?article487&lang=fr">Stavros Lazaris</a>,
+            <a href="https://www.orient-mediterranee.com/spip.php?article487&amp;lang=fr">Stavros Lazaris</a>,
             <a href="https://davidpicard.github.io/">David Picard</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>ICDAR</em>, 2021
-              </br>
+              <br>
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2108.08109">[PDF]</a> &nbsp;
               <a href="https://github.com/Rykoua/ImageCollation">[Code]</a> &nbsp;
@@ -1415,40 +1089,40 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="https://youtu.be/yXe7JHSJDUs">[Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/ICDAR_ImageCollation_Slides.pdf"> [Slides] </a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ImageCollation/icdar21.pdf"> [Poster] </a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/Rykoua/ImageCollation" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/Rykoua/ImageCollation" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="14"><span class="star-label">Star</span><span class="star-value">14</span></a>
               
             </td>
         </tr>
 
-        <tr bgcolor="#ffffd0">
+        <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/medici_small.gif' width="80" > &nbsp;
-                <img src='images/RANSACflow_small.gif' width="80" >
-                
+                <img src='images/web/medici_small.webp' width="80" loading="lazy" decoding="async" alt="Research publication preview"> &nbsp;
+                <img src='images/web/RANSACflow_small.webp' width="80" loading="lazy" decoding="async" alt="Research publication preview">
+
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/">
-                <papertitle>RANSAC-Flow: generic two-stage image alignment</papertitle>
+                <span class="paper-title">RANSAC-Flow: generic two-stage image alignment</span>
               </a>
-              </br>
+              <br>
               
             <strong>Xi Shen</strong>,
             <a href="https://imagine-lab.enpc.fr/staff-members/francois-darmon">Fran&ccedil;ois  Darmon</a>,
             <a href="http://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>ECCV</em>, 2020
-              </br>
+              <br>
               <a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/2004.01526">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/RANSAC-Flow">[Code]</a> &nbsp;
               <a href="https://youtu.be/ltZpqRtuA6A">[Demo]</a> &nbsp;
               <a href="https://youtu.be/FXqCZlmipdM">[Video]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/RANSAC-Flow/slide_ransac_flow.pptx"> [Slides] </a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/RANSAC-Flow" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/RANSAC-Flow" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="451"><span class="star-label">Star</span><span class="star-value">451</span></a>
               
             </td>
         </tr>
@@ -1456,16 +1130,16 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/sib.jpeg' width="220" >
+                <img src='images/web/sib.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
                 
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://github.com/hushell/sib_meta_learn">
-                <papertitle>Empirical Bayes Transductive Meta-Learning with Synthetic Gradients</papertitle>
+                <span class="paper-title">Empirical Bayes Transductive Meta-Learning with Synthetic Gradients</span>
               </a>
-              </br>
+              <br>
             
             <a href="http://hushell.github.io/">Shell Xu Hu</a>,
             <a href="https://www.linkedin.com/in/pablo-garc%C3%ADa-moreno-4b812087/?originalSubdomain=uk">Pablo Moreno</a>,
@@ -1474,12 +1148,12 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="http://imagine.enpc.fr/~obozinsg/">Guillaume Obozinski</a>,
             <a href="https://inverseprobability.com/biog">Neil D. Lawrence</a> 
             <a href="http://adamian.github.io/">Andreas Damianou</a>
-              </br>
+              <br>
               <em>ICLR</em>, 2020
-              </br>
+              <br>
               <a href="https://openreview.net/forum?id=Hkg-xgrYvH">[PDF]</a> &nbsp;
               <a href="https://github.com/hushell/sib_meta_learn">[Code]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/hushell/sib_meta_learn" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a>  
+              <a class="github-button" translate="no" lang="en" href="https://github.com/hushell/sib_meta_learn" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="58"><span class="star-label">Star</span><span class="star-value">58</span></a>
               
             </td>
         </tr>
@@ -1487,27 +1161,27 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/watermark.png' width="220" > 
+                <img src='images/web/watermark.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
                 
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/Watermark/">
-                <papertitle>Large-Scale Historical Watermark Recognition: dataset and a new consistency-based approach</papertitle>
+                <span class="paper-title">Large-Scale Historical Watermark Recognition: dataset and a new consistency-based approach</span>
               </a>
-              </br>
+              <br>
               
             <strong>Xi Shen</strong>,
             <a href="http://www.chartes.psl.eu/en/ilaria-pastrolin">Ilaria Pastrolin</a>,
-            <a href="https://scholar.google.com/citations?user=B2RS1M4AAAAJ&hl=en">Oumayma Bounou</a>,
-            <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&hl=en">Spyros Gidaris</a>,
+            <a href="https://scholar.google.com/citations?user=B2RS1M4AAAAJ&amp;hl=en">Oumayma Bounou</a>,
+            <a href="https://scholar.google.fr/citations?user=7atfg7EAAAAJ&amp;hl=en">Spyros Gidaris</a>,
             <a href="http://www.chartes.psl.eu/fr/marc-smith">Marc Smith</a>,
             <a href="http://www.chartes.psl.eu/fr/olivier-poncet">Olivier Poncet</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>ICPR</em>, 2020
-              </br>
+              <br>
               <a href="http://imagine.enpc.fr/~shenx/Watermark/">[Project page]</a> &nbsp;
               <a href="http://arxiv.org/pdf/1908.10254.pdf">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/WatermarkReco">[Code]</a> &nbsp;
@@ -1516,46 +1190,46 @@ document.addEventListener("DOMContentLoaded", function () {
               <a href="http://imagine.enpc.fr/~shenx/Watermark/watermarkReco.pptx">[Slides]</a> &nbsp;
               <a href="https://filigranes.inria.fr/#/filigrane-search">[Web App]</a>&nbsp;
               <a href="https://hal.archives-ouvertes.fr/hal-02513038/">[Paper on Web App]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/WatermarkReco" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/WatermarkReco" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="59"><span class="star-label">Star</span><span class="star-value">59</span></a>
               
               
             </td>
         </tr>
 
 
-        <tr bgcolor="#ffffd0">
+        <tr data-featured="true">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/artminer.jpeg' width="220" >
+                <img src='images/web/artminer.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
                 
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://imagine.enpc.fr/~shenx/ArtMiner/">
-                <papertitle>Discovering Visual Patterns in Art Collections with Spatially-consistent Feature Learning</papertitle>
+                <span class="paper-title">Discovering Visual Patterns in Art Collections with Spatially-consistent Feature Learning</span>
               </a>
-              </br>
+              <br>
               
             <strong>Xi Shen</strong>,
             <a href="http://people.eecs.berkeley.edu/~efros/">Alexei A. Efros</a>,
             <a href="http://imagine.enpc.fr/~aubrym/">Mathieu Aubry</a>
-              </br>
+              <br>
               <em>CVPR</em>, 2019
-              </br>
+              <br>
               <a href="https://www.nature.com/articles/d41586-019-01794-3">
               <span style="color: firebrick;">
               Covered by Nature.
               </span>
               </a>
-              </br>
+              <br>
               
               <a href="http://imagine.enpc.fr/~shenx/ArtMiner/">[Project page]</a> &nbsp;
               <a href="https://arxiv.org/abs/1903.02678">[PDF]</a> &nbsp;
               <a href="https://github.com/XiSHEN0220/ArtMiner">[Code]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/data/Brueghel.zip">[Dataset]</a> &nbsp;
               <a href="http://imagine.enpc.fr/~shenx/ArtMiner/artMiner.pdf"> [Slides] </a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/ArtMiner" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/XiSHEN0220/ArtMiner" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="115"><span class="star-label">Star</span><span class="star-value">115</span></a>
               
             </td>
         </tr>
@@ -1564,28 +1238,28 @@ document.addEventListener("DOMContentLoaded", function () {
         <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div style="display: flex; justify-content: center;">
-                <img src='images/maan.png' width="220" >
+                <img src='images/web/maan.webp' width="220" loading="lazy" decoding="async" alt="Research publication preview">
                 
               </div>
               
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://github.com/yyuanad/MAAN">
-                <papertitle>Marginalized Average Attentional Network For Weakly-Supervised Learning</papertitle>
+                <span class="paper-title">Marginalized Average Attentional Network For Weakly-Supervised Learning</span>
               </a>
-              </br>
+              <br>
             
             <a href="https://yyuanad.github.io/">Yuan Yuan</a>, 
             <a href="https://yueminglyu.github.io/">Yueming Lyu</a>,   
             <strong>Xi Shen</strong>,
             <a href="https://www.uts.edu.au/staff/ivor.tsang">Ivor Tsang</a>,
             <a href="https://sites.google.com/view/dyyeung/">Dit-Yan Yeung</a>
-              </br>
+              <br>
               <em>ICLR</em>, 2019
-              </br>
+              <br>
               <a href="https://openreview.net/pdf?id=HkljioCcFQ">[PDF]</a> &nbsp;
               <a href="https://github.com/yyuanad/MAAN">[Code]</a> &nbsp;
-              <a class="github-button" translate="no" lang="en" href="https://github.com/yyuanad/MAAN" data-icon="octicon-star" data-size="medium" data-show-count="true">Star</a> 
+              <a class="github-button" translate="no" lang="en" href="https://github.com/yyuanad/MAAN" data-icon="octicon-star" data-size="medium" data-show-count="true" data-stars="34"><span class="star-label">Star</span><span class="star-value">34</span></a>
               
             </td>
         </tr>
@@ -1596,51 +1270,29 @@ document.addEventListener("DOMContentLoaded", function () {
           
     
 
-				
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading id="heading-misc">🎯 Misc.</heading>
-              <hr/>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <h3> Academic Services </h3>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; Reviewer for ICML, CVPR, ECCV, NeurIPS, ICLR, BMVC, WACV, TPAMI, PR, IJCV, ICCV. </p>
-          <h3> Sports</h3>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; I’m an amateur football player with a personal best of 11.30 seconds in the 100 meters. I also enjoy jogging, hiking, camping, and skiing. </p>
-        
+        <section id="misc" class="content-section section-panel misc-section" data-nav-section>
+          <h2 class="section-heading"><span id="heading-misc">Beyond Research</span></h2>
+          <div class="misc-grid">
+            <article>
+              <p class="misc-label" id="community-label">Community</p>
+              <h3 id="services-title">Academic service</h3>
+              <p id="services-body">Reviewer for ICML, CVPR, ECCV, NeurIPS, ICLR, BMVC, WACV, TPAMI, PR, IJCV, and ICCV.</p>
+            </article>
+            <article>
+              <p class="misc-label" id="motion-label">Motion</p>
+              <h3 id="sports-title">Outside the lab</h3>
+              <p id="sports-body">I’m an amateur football player with a personal best of 11.30 seconds in the 100 meters. I also enjoy jogging, hiking, camping, and skiing.</p>
+            </article>
+          </div>
+        </section>
 
-        </br>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <hr/>
-      <tr>
-        <td>
-        <p>
-        <a href="https://www.easycounter.com/"><img src="https://www.easycounter.com/counter.php?shenxi"
-            border="0" alt="Website Hit Counter"></a>
-        <font size="2">unique visitors since Sep 2023</p>
-        </td>
-
-        <td>
-        <p align="right"><font size="2">
-          This website takes the template from <a href="https://github.com/jonbarron/website">here</a>.
-        </font>
-
-        </p>
-        </td>
-      </tr>
-      </table>
-
-
-        
-
-          
-
-          
-
-          </tbody></table>
+        <footer class="site-footer">
+          <p>© 2026 Xi Shen</p>
+          <p>Original academic template inspired by <a href="https://github.com/jonbarron/website">Jon Barron</a>.</p>
+        </footer>
       </td>
     </tr>
-  </table>
+  </tbody></table>
 </body>
 
 </html>
