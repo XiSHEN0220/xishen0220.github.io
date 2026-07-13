@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T04:42:48.475Z",
+  "generated_at": "2026-07-13T04:49:49.356Z",
   "repos": {
     "intellindust-ai-lab/skel-cf": {
       "stars": 66,
@@ -17,7 +17,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 274,
+      "stars": 275,
       "forks": 34,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -37,7 +37,7 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 1912,
+      "stars": 1913,
       "forks": 206,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
@@ -77,13 +77,13 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "mael-zys/t2m-gpt": {
-      "stars": 767,
+      "stars": 768,
       "forks": 66,
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "winfredy/sadtalker": {
-      "stars": 13946,
-      "forks": 2660,
+      "stars": 13951,
+      "forks": 2661,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
