@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T04:35:22.094Z",
+  "generated_at": "2026-07-25T04:31:43.948Z",
   "repos": {
     "intellindust-ai-lab/skel-cf": {
       "stars": 66,
@@ -17,7 +17,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 288,
+      "stars": 289,
       "forks": 36,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -37,7 +37,7 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 1944,
+      "stars": 1946,
       "forks": 206,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
@@ -98,7 +98,7 @@
     },
     "yangtaowang95/tokencut": {
       "stars": 339,
-      "forks": 36,
+      "forks": 37,
       "url": "https://github.com/YangtaoWANG95/TokenCut"
     },
     "xishen0220/segswap": {
