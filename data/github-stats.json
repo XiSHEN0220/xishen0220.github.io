@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T04:54:56.530Z",
+  "generated_at": "2026-07-28T04:31:00.433Z",
   "repos": {
     "intellindust-ai-lab/skel-cf": {
       "stars": 66,
@@ -37,8 +37,8 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 1949,
-      "forks": 206,
+      "stars": 1952,
+      "forks": 207,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
@@ -77,12 +77,12 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "mael-zys/t2m-gpt": {
-      "stars": 771,
+      "stars": 770,
       "forks": 66,
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "winfredy/sadtalker": {
-      "stars": 13973,
+      "stars": 13974,
       "forks": 2668,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
@@ -132,7 +132,7 @@
       "url": "https://github.com/XiSHEN0220/WatermarkReco"
     },
     "xishen0220/artminer": {
-      "stars": 115,
+      "stars": 114,
       "forks": 19,
       "url": "https://github.com/XiSHEN0220/ArtMiner"
     },
