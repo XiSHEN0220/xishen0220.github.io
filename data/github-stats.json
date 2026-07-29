@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T04:31:00.433Z",
+  "generated_at": "2026-07-29T04:33:23.643Z",
   "repos": {
     "intellindust-ai-lab/skel-cf": {
       "stars": 66,
@@ -37,8 +37,8 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 1952,
-      "forks": 207,
+      "stars": 1957,
+      "forks": 208,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
@@ -83,7 +83,7 @@
     },
     "winfredy/sadtalker": {
       "stars": 13974,
-      "forks": 2668,
+      "forks": 2670,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
