@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-21T02:37:29.689Z",
+  "generated_at": "2026-08-22T02:29:04.159Z",
   "repos": {
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 316,
-      "forks": 38,
+      "stars": 319,
+      "forks": 39,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
     "intellindust-ai-lab/skel-cf": {
@@ -22,7 +22,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
     "wleilei/ov-deim": {
-      "stars": 42,
+      "stars": 43,
       "forks": 3,
       "url": "https://github.com/wleilei/OV-DEIM"
     },
@@ -42,12 +42,12 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 1988,
+      "stars": 1993,
       "forks": 213,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1603,
+      "stars": 1602,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
@@ -87,8 +87,8 @@
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "winfredy/sadtalker": {
-      "stars": 14022,
-      "forks": 2686,
+      "stars": 14024,
+      "forks": 2685,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
@@ -123,7 +123,7 @@
     },
     "xishen0220/ransac-flow": {
       "stars": 451,
-      "forks": 78,
+      "forks": 77,
       "url": "https://github.com/XiSHEN0220/RANSAC-Flow"
     },
     "hushell/sib_meta_learn": {
