@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-22T02:29:04.159Z",
+  "generated_at": "2026-08-23T02:37:45.165Z",
   "repos": {
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 319,
+      "stars": 318,
       "forks": 39,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -47,7 +47,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1602,
+      "stars": 1603,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
@@ -87,7 +87,7 @@
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "winfredy/sadtalker": {
-      "stars": 14024,
+      "stars": 14028,
       "forks": 2685,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
