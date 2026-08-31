@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T06:44:05.966Z",
+  "generated_at": "2026-08-31T07:04:03.626Z",
   "repos": {
     "intellindust-ai-lab/edgecrafter": {
       "stars": 325,
@@ -8,7 +8,7 @@
     },
     "intellindust-ai-lab/skel-cf": {
       "stars": 76,
-      "forks": 5,
+      "forks": 4,
       "url": "https://github.com/Intellindust-AI-Lab/SKEL-CF"
     },
     "intellindust-ai-lab/sureplus": {
@@ -42,12 +42,12 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 2004,
+      "stars": 2006,
       "forks": 213,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1607,
+      "stars": 1609,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
@@ -87,7 +87,7 @@
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "winfredy/sadtalker": {
-      "stars": 14050,
+      "stars": 14055,
       "forks": 2693,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
