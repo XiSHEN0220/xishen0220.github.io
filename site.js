@@ -35,7 +35,7 @@ window.__i18n = {
     bio_1: "At <a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>, our team builds reliable and efficient computer vision systems for real-time applications on edge devices with limited NPU compute.",
     bio_2: "I completed my Ph.D. in the <a href=\"http://imagine.enpc.fr/\">IMAGINE team</a> at <a href=\"http://www.enpc.fr/\">Ecole des Ponts ParisTech</a>, and I lived in lovely Paris, France for 10 years. Previously, I worked as a Senior Researcher at Tencent AI Lab.",
     bio_3: "If you are interested in internships focused on AI safety and efficient training for real-time vision, feel free to reach out.",
-    last_update: "(Last update: 2026-08-15)",
+    last_update: "(Last update: 2026-09-04)",
     now_title: "Now Building",
     now_body: "Robust and efficient open-world vision models for real-time edge deployment, currently focused on next-generation edge vision models.",
     heading_news: "News",
@@ -67,7 +67,7 @@ window.__i18n = {
     bio_1: "在 <a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>，我们的团队专注于在有限 NPU 算力的边缘设备上构建可靠、高效的实时计算机视觉系统。",
     bio_2: "我在 <a href=\"http://www.enpc.fr/\">巴黎高科国立桥路学院</a> 的 <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> 团队完成博士学位，并在法国美丽的巴黎生活了 10 年。此前我曾在腾讯 AI Lab 担任高级研究员。",
     bio_3: "如果你对人工智能安全或实时视觉模型高效训练方向的实习感兴趣，欢迎邮件联系我。",
-    last_update: "（最后更新：2026-08-15）",
+    last_update: "（最后更新：2026-09-04）",
     now_title: "当前在做",
     now_body: "面向实时边缘部署的鲁棒高效开放世界视觉模型，当前重点是新一代边缘视觉模型。",
     heading_news: "最新动态",
@@ -99,7 +99,7 @@ window.__i18n = {
     bio_1: "Au sein d'<a href=\"https://intellindust-ai-lab.github.io/\">Intellindust AI Lab</a>, notre équipe développe des systèmes de vision par ordinateur fiables et efficaces pour des applications en temps réel sur des appareils embarqués disposant d'une puissance NPU limitée.",
     bio_2: "J'ai effectué mon doctorat au sein de l'équipe <a href=\"http://imagine.enpc.fr/\">IMAGINE</a> à <a href=\"http://www.enpc.fr/\">l'École des Ponts ParisTech</a>, et j'ai vécu dix ans dans la belle ville de Paris, en France. J'ai ensuite travaillé comme chercheur senior chez Tencent AI Lab.",
     bio_3: "Si vous êtes intéressé par un stage autour de la sécurité de l'IA et de l'entraînement efficace de modèles de vision en temps réel, n'hésitez pas à me contacter par e-mail.",
-    last_update: "(Dernière mise à jour : 2026-08-15)",
+    last_update: "(Dernière mise à jour : 2026-09-04)",
     now_title: "En cours",
     now_body: "Des modèles de vision en monde ouvert, robustes et efficaces, destinés au déploiement embarqué en temps réel, avec pour priorité la prochaine génération de modèles de vision embarquée.",
     heading_news: "Actualités",
@@ -125,6 +125,7 @@ window.__i18n = {
 window.__sectionI18n = {
   zh: {
     news: [
+      `论文 <a href="https://github.com/Mael-zys/Mael-zys.github.io/blob/master/T2M-GPT/T2M-GPT%2B.pdf">Text-to-Motion Generation With Discrete Representations and Large Language Models（T2M-GPT+）</a> 已被 TPAMI 2026 接收。`,
       `<a href="https://intellindust-ai-lab.github.io/projects/EdgeCrafter/">EdgeCrafter: Compact ViTs for Edge Dense Prediction via Task-Specialized Distillation</a> 已被 TMLR 2026 接收。`,
       `<a href="https://pokerman8.github.io/SKEL-CF/">SKEL-CF: Coarse-to-Fine Biomechanical Skeleton and Surface Mesh Recovery</a> 已被 ECCV 2026 接收。`,
       `两篇论文（<a href="https://intellindust-ai-lab.github.io/projects/FT-FSOD/">HED</a> 和 <a href="https://walker1126.github.io/MoVie-project/">MoVie</a>）已被 CVPR 2026 接收；<a href="https://arxiv.org/abs/2603.28182">HED</a> 与 <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">SURE+</a> 现已发布于 arXiv。`,
@@ -159,6 +160,7 @@ window.__sectionI18n = {
   },
   fr: {
     news: [
+      `L'article <a href="https://github.com/Mael-zys/Mael-zys.github.io/blob/master/T2M-GPT/T2M-GPT%2B.pdf">Text-to-Motion Generation With Discrete Representations and Large Language Models (T2M-GPT+)</a> a été accepté pour publication dans TPAMI en 2026.`,
       `<a href="https://intellindust-ai-lab.github.io/projects/EdgeCrafter/">EdgeCrafter: Compact ViTs for Edge Dense Prediction via Task-Specialized Distillation</a> a été accepté pour publication dans TMLR en 2026.`,
       `<a href="https://pokerman8.github.io/SKEL-CF/">SKEL-CF: Coarse-to-Fine Biomechanical Skeleton and Surface Mesh Recovery</a> a été accepté à ECCV 2026.`,
       `Deux articles, <a href="https://intellindust-ai-lab.github.io/projects/FT-FSOD/">HED</a> et <a href="https://walker1126.github.io/MoVie-project/">MoVie</a>, ont été acceptés à CVPR 2026 ; <a href="https://arxiv.org/abs/2603.28182">HED</a> et <a href="https://intellindust-ai-lab.github.io/projects/SUREPlus/">SURE+</a> sont désormais disponibles sur arXiv.`,
