@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T05:58:12.686Z",
+  "generated_at": "2026-09-05T05:48:31.789Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 777,
@@ -22,7 +22,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/SUREPlus"
     },
     "intellindust-ai-lab/ft-fsod": {
-      "stars": 54,
+      "stars": 55,
       "forks": 3,
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
@@ -32,7 +32,7 @@
       "url": "https://github.com/wleilei/OV-DEIM"
     },
     "intellindust-ai-lab/fsod-vfm": {
-      "stars": 100,
+      "stars": 101,
       "forks": 6,
       "url": "https://github.com/Intellindust-AI-Lab/FSOD-VFM"
     },
