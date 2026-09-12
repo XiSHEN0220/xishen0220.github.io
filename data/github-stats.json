@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T06:03:50.674Z",
+  "generated_at": "2026-09-12T05:52:35.671Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 777,
@@ -8,11 +8,11 @@
     },
     "intellindust-ai-lab/edgecrafter": {
       "stars": 339,
-      "forks": 39,
+      "forks": 40,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
     "intellindust-ai-lab/skel-cf": {
-      "stars": 77,
+      "stars": 76,
       "forks": 5,
       "url": "https://github.com/Intellindust-AI-Lab/SKEL-CF"
     },
@@ -22,7 +22,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/SUREPlus"
     },
     "intellindust-ai-lab/ft-fsod": {
-      "stars": 55,
+      "stars": 54,
       "forks": 3,
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
@@ -87,7 +87,7 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14078,
+      "stars": 14077,
       "forks": 2693,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
@@ -138,7 +138,7 @@
     },
     "xishen0220/artminer": {
       "stars": 114,
-      "forks": 19,
+      "forks": 18,
       "url": "https://github.com/XiSHEN0220/ArtMiner"
     },
     "yyuanad/maan": {
