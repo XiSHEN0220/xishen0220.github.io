@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-15T06:11:34.017Z",
+  "generated_at": "2026-09-16T06:05:52.118Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 777,
@@ -7,7 +7,7 @@
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 341,
+      "stars": 343,
       "forks": 40,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -47,12 +47,12 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 2029,
+      "stars": 2032,
       "forks": 216,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1620,
+      "stars": 1622,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
@@ -87,13 +87,13 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14083,
-      "forks": 2695,
+      "stars": 14085,
+      "forks": 2694,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
       "stars": 165,
-      "forks": 27,
+      "forks": 28,
       "url": "https://github.com/dulucas/siMLPe"
     },
     "yingyichen-cyy/nested-co-teaching": {
