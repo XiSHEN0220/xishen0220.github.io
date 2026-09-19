@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T05:58:31.132Z",
+  "generated_at": "2026-09-19T05:57:53.109Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 777,
@@ -47,17 +47,17 @@
       "url": "https://github.com/NiFangBaAGe/Explicit-Visual-Prompt"
     },
     "intellindust-ai-lab/deimv2": {
-      "stars": 2031,
+      "stars": 2034,
       "forks": 216,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1622,
+      "stars": 1623,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
     "yutingli0606/htr-vt": {
-      "stars": 137,
+      "stars": 138,
       "forks": 18,
       "url": "https://github.com/Intellindust-AI-Lab/HTR-VT"
     },
@@ -77,7 +77,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/SSB-OSR"
     },
     "yangtaowang95/tokencut_video": {
-      "stars": 64,
+      "stars": 65,
       "forks": 4,
       "url": "https://github.com/YangtaoWANG95/TokenCut_video"
     },
@@ -87,7 +87,7 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14092,
+      "stars": 14091,
       "forks": 2695,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
@@ -102,7 +102,7 @@
       "url": "https://github.com/yingyichen-cyy/Nested-Co-teaching"
     },
     "yangtaowang95/tokencut": {
-      "stars": 341,
+      "stars": 342,
       "forks": 37,
       "url": "https://github.com/YangtaoWANG95/TokenCut"
     },
