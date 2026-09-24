@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-23T06:02:06.019Z",
+  "generated_at": "2026-09-24T06:12:55.238Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 777,
-      "forks": 66,
+      "forks": 65,
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 344,
+      "stars": 347,
       "forks": 41,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -52,7 +52,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1623,
+      "stars": 1624,
       "forks": 202,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
