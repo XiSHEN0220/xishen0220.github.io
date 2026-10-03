@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T07:02:52.921Z",
+  "generated_at": "2026-10-03T06:36:21.096Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 779,
@@ -12,7 +12,7 @@
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
     "intellindust-ai-lab/skel-cf": {
-      "stars": 78,
+      "stars": 79,
       "forks": 5,
       "url": "https://github.com/Intellindust-AI-Lab/SKEL-CF"
     },
@@ -87,8 +87,8 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14111,
-      "forks": 2691,
+      "stars": 14112,
+      "forks": 2689,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
