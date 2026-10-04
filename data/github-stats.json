@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T06:36:21.096Z",
+  "generated_at": "2026-10-04T06:59:22.537Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 779,
@@ -7,7 +7,7 @@
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "intellindust-ai-lab/edgecrafter": {
-      "stars": 350,
+      "stars": 351,
       "forks": 43,
       "url": "https://github.com/Intellindust-AI-Lab/EdgeCrafter"
     },
@@ -53,7 +53,7 @@
     },
     "shihuahuang95/deim": {
       "stars": 1629,
-      "forks": 204,
+      "forks": 205,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
     "yutingli0606/htr-vt": {
@@ -87,8 +87,8 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14112,
-      "forks": 2689,
+      "stars": 14116,
+      "forks": 2688,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
@@ -103,7 +103,7 @@
     },
     "yangtaowang95/tokencut": {
       "stars": 343,
-      "forks": 37,
+      "forks": 36,
       "url": "https://github.com/YangtaoWANG95/TokenCut"
     },
     "xishen0220/segswap": {
