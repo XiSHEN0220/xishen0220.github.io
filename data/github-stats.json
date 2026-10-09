@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-08T07:28:30.782Z",
+  "generated_at": "2026-10-09T07:27:17.245Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 779,
-      "forks": 65,
+      "forks": 64,
       "url": "https://github.com/Mael-zys/T2M-GPT"
     },
     "intellindust-ai-lab/edgecrafter": {
@@ -48,11 +48,11 @@
     },
     "intellindust-ai-lab/deimv2": {
       "stars": 2051,
-      "forks": 220,
+      "forks": 221,
       "url": "https://github.com/Intellindust-AI-Lab/DEIMv2"
     },
     "shihuahuang95/deim": {
-      "stars": 1631,
+      "stars": 1632,
       "forks": 206,
       "url": "https://github.com/Intellindust-AI-Lab/DEIM"
     },
@@ -87,8 +87,8 @@
       "url": "https://github.com/zyhbili/LivelySpeaker"
     },
     "winfredy/sadtalker": {
-      "stars": 14120,
-      "forks": 2690,
+      "stars": 14123,
+      "forks": 2692,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
@@ -122,7 +122,7 @@
       "url": "https://github.com/Rykoua/ImageCollation"
     },
     "xishen0220/ransac-flow": {
-      "stars": 451,
+      "stars": 450,
       "forks": 77,
       "url": "https://github.com/XiSHEN0220/RANSAC-Flow"
     },
