@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T08:19:29.320Z",
+  "generated_at": "2026-11-22T08:03:12.042Z",
   "repos": {
     "mael-zys/t2m-gpt": {
       "stars": 783,
@@ -23,11 +23,11 @@
     },
     "intellindust-ai-lab/ft-fsod": {
       "stars": 63,
-      "forks": 5,
+      "forks": 6,
       "url": "https://github.com/Intellindust-AI-Lab/FT-FSOD"
     },
     "wleilei/ov-deim": {
-      "stars": 52,
+      "stars": 53,
       "forks": 3,
       "url": "https://github.com/wleilei/OV-DEIM"
     },
@@ -88,7 +88,7 @@
     },
     "winfredy/sadtalker": {
       "stars": 14213,
-      "forks": 2706,
+      "forks": 2710,
       "url": "https://github.com/OpenTalker/SadTalker"
     },
     "dulucas/simlpe": {
